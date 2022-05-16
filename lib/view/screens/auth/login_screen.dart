@@ -153,13 +153,13 @@ class LoginScreen extends StatelessWidget {
                         GetBuilder<AuthController>(builder: (_) {
                           return AuthButton(
                             onPressed: () {
-                              // if (fromKey.currentState!.validate()) {
-                              //   String email = emailController.text.trim();
-                              //   String password = passwordController.text;
-                              //
-                              //   controller.logInUsingFirebase(
-                              //       email: email, password: password);
-                              // }
+                              if (fromKey.currentState!.validate()) {
+                                String email = emailController.text.trim();
+                                String password = passwordController.text;
+
+                                controller.logInUsingFirebase(
+                                    email: email, password: password);
+                              }
                             },
                             text: AppStrings.login,
                           );
@@ -181,7 +181,7 @@ class LoginScreen extends StatelessWidget {
                           children: [
                             InkWell(
                               onTap: () {
-                                // controller.faceBookSignUpApp();
+                                controller.faceBookSignUpApp();
                               },
                               child: Image.asset(
                                 ImageAssets.facebook,
@@ -193,7 +193,7 @@ class LoginScreen extends StatelessWidget {
                             GetBuilder<AuthController>(builder: (_) {
                               return InkWell(
                                 onTap: () {
-                                  // controller.googleSinUpApp();
+                                  controller.googleSinUpApp();
                                 },
                                 child: Image.asset(
                                   ImageAssets.google,

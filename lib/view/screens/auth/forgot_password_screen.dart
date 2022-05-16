@@ -110,10 +110,10 @@ class ForgotPasswordScreen extends StatelessWidget {
                   GetBuilder<AuthController>(builder: (_) {
                     return AuthButton(
                       onPressed: () {
-                        // if (formKey.currentState!.validate()) {
-                        //   String email = emailController.text.trim();
-                        //   controller.resetPassword(email);
-                        // }
+                        if (formKey.currentState!.validate()) {
+                          String email = emailController.text.trim();
+                          controller.resetPassword(email);
+                        }
                       },
                       text: AppStrings.send,
                     );

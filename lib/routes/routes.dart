@@ -4,6 +4,9 @@ import '../../view/screens/auth/signup_screen.dart';
 import 'package:get/get.dart';
 
 import '../logic/bindings/auth_binding.dart';
+import '../logic/bindings/main_binding.dart';
+import '../logic/bindings/product_binding.dart';
+import '../view/screens/main_screen.dart';
 import '../view/screens/welcome_screen.dart';
 
 class AppRoutes{
@@ -30,6 +33,15 @@ class AppRoutes{
       page: ()=> ForgotPasswordScreen(),
       binding: AuthBinding(),
     ),
+    GetPage(
+      name: Routes.mainScreen,
+      page: () => MainScreen(),
+      bindings: [
+        AuthBinding(),
+        // MainBinding(),
+        // ProductBinding(),
+      ],
+    ),
   ];
 }
 class Routes {
@@ -37,4 +49,6 @@ class Routes {
   static const loginScreen = '/loginScreen';
   static const signUpScreen = '/signUpScreen';
   static const forgotPasswordScreen = '/forgotPasswordScreen';
+  static const mainScreen = '/mainScreen';
+
 }

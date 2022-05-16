@@ -129,10 +129,33 @@ class SignUpScreen extends StatelessWidget {
                         const SizedBox(height: AppSize.s50,),
                         CheckWidget(),
                         const SizedBox(height: AppSize.s50,),
-                        AuthButton(
-                          text: AppStrings.signUp,
-                          onPressed: (){},
-                        ),
+                        GetBuilder<AuthController>(builder: (_){
+                          return AuthButton(
+                            text: AppStrings.signUp,
+                            onPressed: (){
+                              if (controller.isCheckBox == false) {
+                                Get.snackbar(
+                                  AppStrings.checkBox,
+                                  AppStrings.termsAndConditions,
+                                  snackPosition: SnackPosition.BOTTOM,
+                                  backgroundColor: Colors.green,
+                                  colorText: Colors.white,
+                                );
+                              } else if (formKey.currentState!.validate()) {
+                                String name = nameController.text.trim();
+                                String email = emailController.text.trim();
+                                String password = passwordController.text;
+                                controller.signUpUsingFirebase(
+                                  name: name,
+                                  email: email,
+                                  password: password,
+                                );
+
+                                controller.isCheckBox = true;
+                              }
+                            },
+                          );
+                        }),
                       ],
                     ),
                   ),

@@ -41,7 +41,7 @@ class CheckWidget extends StatelessWidget {
                 color: Get.isDarkMode?Colors.black:Colors.white,
               ),
               TextUtils(
-                text: AppStrings.termsAndCondition,
+                text: AppStrings.termsAndConditions,
                 fontSize: AppSize.s16,
                 fontWeight: FontWeight.normal,
                 color: Get.isDarkMode?Colors.black:Colors.white,
