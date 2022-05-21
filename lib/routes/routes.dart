@@ -1,3 +1,5 @@
+import 'package:e_shop/logic/controllers/product_controller.dart';
+
 import '../../view/screens/auth/forgot_password_screen.dart';
 import '../../view/screens/auth/login_screen.dart';
 import '../../view/screens/auth/signup_screen.dart';
@@ -6,12 +8,14 @@ import 'package:get/get.dart';
 import '../logic/bindings/auth_binding.dart';
 import '../logic/bindings/main_binding.dart';
 import '../logic/bindings/product_binding.dart';
+import '../view/screens/cart_screen.dart';
 import '../view/screens/main_screen.dart';
 import '../view/screens/welcome_screen.dart';
 
 class AppRoutes{
   // initialRoute
   static const welcome = Routes.welcomeScreen;
+  static const mainScreen = Routes.mainScreen;
   // getPages
   static final routes = [
     GetPage(
@@ -38,9 +42,18 @@ class AppRoutes{
       page: () => MainScreen(),
       bindings: [
         AuthBinding(),
-        // MainBinding(),
-        // ProductBinding(),
+        MainBinding(),
+        ProductBinding(),
       ],
+    ),
+
+    GetPage(
+      name: Routes.cartScreen,
+      page: ()=> CartScreen(),
+      bindings:[
+        AuthBinding(),
+        ProductBinding(),
+  ] ,
     ),
   ];
 }
@@ -50,5 +63,6 @@ class Routes {
   static const signUpScreen = '/signUpScreen';
   static const forgotPasswordScreen = '/forgotPasswordScreen';
   static const mainScreen = '/mainScreen';
+  static const cartScreen = '/cartScreen';
 
 }

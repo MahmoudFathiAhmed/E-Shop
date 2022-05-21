@@ -204,28 +204,28 @@ class AuthController extends GetxController{
     }
   }
 
-  // void signOutFromApp() async {
-  //   try {
-  //     await auth.signOut();
-  //     await googleSignIn.signOut();
-  //     await FacebookAuth.i.logOut();
-  //     displayUserName.value = '';
-  //     displayUserPhoto.value = '';
-  //     //displayUserEmail.value = '';
-  //     isSignedIn = false;
-  //     authBox.remove("auth");
-  //     update();
-  //
-  //     Get.offNamed(Routes.welcomeScreen);
-  //   } catch (error) {
-  //     Get.snackbar(
-  //       'Error!',
-  //       error.toString(),
-  //       snackPosition: SnackPosition.BOTTOM,
-  //       backgroundColor: Colors.green,
-  //       colorText: Colors.white,
-  //     );
-  //   }
-  // }
+  void signOutFromApp() async {
+    try {
+      await auth.signOut();
+      await googleSignIn.signOut();
+      // await FacebookAuth.i.logOut();
+      displayUserName.value = '';
+      displayUserPhoto.value = '';
+      //displayUserEmail.value = '';
+      isSignedIn = false;
+      authBox.remove("auth");
+      update();
+
+      Get.offNamed(Routes.welcomeScreen);
+    } catch (error) {
+      Get.snackbar(
+        'Error!',
+        error.toString(),
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.green,
+        colorText: Colors.white,
+      );
+    }
+  }
 
 }

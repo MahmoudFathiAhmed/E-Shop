@@ -33,10 +33,10 @@ class SignUpScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Get.isDarkMode? Colors.white: darkGreyClr,
+          backgroundColor: Get.isDarkMode? darkGreyClr:Colors.white ,
           elevation: AppSize.s0,
         ),
-        backgroundColor: Get.isDarkMode? Colors.white: darkGreyClr,
+        backgroundColor: context.theme.backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -48,7 +48,6 @@ class SignUpScreen extends StatelessWidget {
                     left: AppPadding.p25,
                     right: AppPadding.p25,
                     top: AppPadding.p40,
-                    bottom: AppPadding.p40,
                   ),
                   child: Form(
                     key: formKey,
@@ -60,14 +59,14 @@ class SignUpScreen extends StatelessWidget {
                               text: AppStrings.sign,
                               fontSize: AppSize.s28,
                               fontWeight: FontWeight.bold,
-                              color: Get.isDarkMode? mainColor : pinkClr,
+                              color: Get.isDarkMode?  pinkClr: mainColor,
                             ),
                             const SizedBox(width: AppSize.s3,),
                             TextUtils(
                               text: AppStrings.up,
                               fontSize: AppSize.s28,
                               fontWeight: FontWeight.bold,
-                              color: Get.isDarkMode? Colors.black: Colors.white,
+                              color: Get.isDarkMode? Colors.white: Colors.black,
                             ),
 
                           ],
@@ -83,7 +82,7 @@ class SignUpScreen extends StatelessWidget {
                             }
                           },
                           keyboardType: TextInputType.text,
-                          prefixIcon: Get.isDarkMode?Image.asset(ImageAssets.user):const Icon(Icons.person,color: pinkClr,size: AppSize.s30,),
+                          prefixIcon: Get.isDarkMode?const Icon(Icons.person,color: pinkClr,size: AppSize.s30,):Image.asset(ImageAssets.user),
                           hintText: AppStrings.userName,
                         ),
                         const SizedBox(height: AppSize.s20,),
@@ -97,7 +96,7 @@ class SignUpScreen extends StatelessWidget {
                             }
                           },
                           keyboardType: TextInputType.emailAddress,
-                          prefixIcon: Get.isDarkMode?Image.asset(ImageAssets.email):const Icon(Icons.email,color: pinkClr,size: AppSize.s30,),
+                          prefixIcon: Get.isDarkMode?const Icon(Icons.email,color: pinkClr,size: AppSize.s30,):Image.asset(ImageAssets.email),
                           hintText: AppStrings.email,
                         ),
                         const SizedBox(height: AppSize.s20,),
@@ -113,7 +112,7 @@ class SignUpScreen extends StatelessWidget {
                                   }
                                 },
                                 keyboardType: TextInputType.visiblePassword,
-                                prefixIcon: Get.isDarkMode?Image.asset(ImageAssets.lock):const Icon(Icons.lock,color: pinkClr,size: AppSize.s30,),
+                                prefixIcon: Get.isDarkMode?const Icon(Icons.lock,color: pinkClr,size: AppSize.s30,):Image.asset(ImageAssets.lock),
                                 obscureText: controller.isVisibility?false:true,
                                 hintText: AppStrings.password,
                                 suffixIcon: IconButton(
