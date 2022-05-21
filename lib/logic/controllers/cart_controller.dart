@@ -64,4 +64,11 @@ class CartController extends GetxController{
 
   get productSubTotal => productsMap.entries.map((e) => e.key.price * e.value).toList();
   get total => productsMap.entries.map((e) => e.key.price * e.value).toList().reduce((value, element) => value+element).toStringAsFixed(2);
+  int quantity (){
+    if(productsMap.isEmpty){
+      return 0;
+    }else{
+    return productsMap.entries.map((e) => e.value).toList().reduce((value, element) => value+element);
+    }
+  }
 }
