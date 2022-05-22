@@ -43,6 +43,10 @@ dependencies:
   flutter_facebook_auth: ^4.3.4
   http: ^0.13.4
   badges: ^2.0.2
+  carousel_slider: ^4.1.1
+  smooth_page_indicator: ^1.0.0+2
+  flutter_rating_bar: ^4.0.1
+  readmore: ^2.1.0
 
 
 dev_dependencies:

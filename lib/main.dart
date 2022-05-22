@@ -1,4 +1,5 @@
 import 'package:e_shop/logic/controllers/theme_controller.dart';
+import 'package:e_shop/utils/theme.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +22,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'MFZ-Shop',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      theme: ThemesApp.light,
+      darkTheme: ThemesApp.dark,
       themeMode: ThemeController().themeDataGet,
       initialRoute: FirebaseAuth.instance.currentUser != null
           || GetStorage().read<bool>('auth') == true
