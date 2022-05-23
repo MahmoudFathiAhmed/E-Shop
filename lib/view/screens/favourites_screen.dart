@@ -119,7 +119,7 @@ class FavouritesScreen extends StatelessWidget {
             const Spacer(),
             IconButton(
                 onPressed: (){
-                  controller.managefavourites(productId);
+                  controller.manageFavourites(productId);
                 },
                 icon: const Icon(Icons.favorite, color: Colors.red,size: AppSize.s30,),
             )

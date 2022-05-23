@@ -48,7 +48,7 @@ class ClothesInfo extends StatelessWidget {
                 ),
                 child: InkWell(
                   onTap: (){
-                    controller.managefavourites(productId);
+                    controller.manageFavourites(productId);
                   },
                   child: controller.isFavourites(productId)? const Icon(Icons.favorite,
                     color: Colors.red,

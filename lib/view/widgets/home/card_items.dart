@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../logic/controllers/cart_controller.dart';
+import '../../../utils/assets_manager.dart';
 
 class CardItems extends StatelessWidget {
    CardItems({Key? key}) : super(key: key);
@@ -25,8 +26,15 @@ class CardItems extends StatelessWidget {
         );
       }else{
         return Expanded(
-          child: GridView.builder(
-              itemCount: controller.productList.length,
+          child: controller.searchList.isEmpty &&
+              controller.searchEditingController.text.isNotEmpty?
+              Get.isDarkMode?
+              Image.asset(ImageAssets.searchEmptyDark):
+              Image.asset(ImageAssets.searchEmptyLight):
+          GridView.builder(
+              itemCount: controller.searchList.isEmpty?
+              controller.productList.length:
+              controller.searchList.length,
               gridDelegate: const  SliverGridDelegateWithMaxCrossAxisExtent(
                 childAspectRatio: 0.8,
                 mainAxisSpacing: 9.0,
@@ -34,18 +42,33 @@ class CardItems extends StatelessWidget {
                 maxCrossAxisExtent: 200,
               ),
               itemBuilder: (context, index){
-                return buildCardItems(
-                  image: controller.productList[index].image,
-                  price: controller.productList[index].price,
-                  rate: controller.productList[index].rating.rate,
-                  productId: controller.productList[index].id,
-                  productModels: controller.productList[index],
-                  onTap: (){
-                    Get.to(()=>ProductDetailsScreen(
+                if(controller.searchList.isEmpty){
+                  return buildCardItems(
+                      image: controller.productList[index].image,
+                      price: controller.productList[index].price,
+                      rate: controller.productList[index].rating.rate,
+                      productId: controller.productList[index].id,
                       productModels: controller.productList[index],
-                    ));
-                  }
-                );
+                      onTap: (){
+                        Get.to(()=>ProductDetailsScreen(
+                          productModels: controller.productList[index],
+                        ));
+                      }
+                  );
+                }else{
+                  return buildCardItems(
+                      image: controller.searchList[index].image,
+                      price: controller.searchList[index].price,
+                      rate: controller.searchList[index].rating.rate,
+                      productId: controller.searchList[index].id,
+                      productModels: controller.searchList[index],
+                      onTap: (){
+                        Get.to(()=>ProductDetailsScreen(
+                          productModels: controller.searchList[index],
+                        ));
+                      }
+                  );
+                }
               }
           ),
         );
@@ -85,7 +108,7 @@ class CardItems extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: (){
-                      controller.managefavourites(productId);
+                      controller.manageFavourites(productId);
                     },
                     icon: controller.isFavourites(productId)? const Icon(
                       Icons.favorite,

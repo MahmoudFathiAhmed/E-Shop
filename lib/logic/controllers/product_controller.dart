@@ -1,7 +1,10 @@
-import 'package:e_shop/model/product_models.dart';
-import 'package:e_shop/services/product_services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+
+import '../../model/product_models.dart';
+import '../../services/product_services.dart';
+
 
 class ProductController extends GetxController{
   var productList = <ProductModels>[].obs;
@@ -9,6 +12,9 @@ class ProductController extends GetxController{
   var storage = GetStorage();
   var isLoading = true.obs;
 
+  //search
+  var searchList = <ProductModels>[].obs;
+  TextEditingController searchEditingController = TextEditingController();
   @override
   void onInit(){
     super.onInit();
@@ -32,7 +38,7 @@ class ProductController extends GetxController{
 }
 
 //logic for favourite screen
-  void managefavourites(int productId)async{
+  void manageFavourites(int productId)async{
     var existingIndex = favouritesList.indexWhere((element) => element.id == productId);
     if(existingIndex >= 0 ){
       favouritesList.removeAt(existingIndex);
@@ -45,5 +51,21 @@ class ProductController extends GetxController{
 
 bool isFavourites(int productId){
   return favouritesList.any((element) => element.id == productId);
+}
+
+//search Bar Logic
+void addSearchToList(String searchName){
+    searchName = searchName.toLowerCase();
+ searchList.value = productList.where((search) {
+   var searchTitle = search.title.toLowerCase();
+   var searchPrice = search.price.toString().toLowerCase();
+   return searchTitle.contains(searchName)||searchPrice.contains(searchName);
+ }).toList();
+ update();
+}
+
+void clearSearch(){
+searchEditingController.clear();
+addSearchToList('');
 }
 }
