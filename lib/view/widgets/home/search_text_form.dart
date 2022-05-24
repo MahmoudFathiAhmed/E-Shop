@@ -52,6 +52,7 @@ class SearchTextForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppSize.s10)
         ),
       ),
-    ));
+    ),
+    );
   }
 }

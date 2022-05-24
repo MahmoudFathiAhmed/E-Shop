@@ -4,6 +4,7 @@ import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/routes.dart';
 import '../../../utils/values_manager.dart';
 
 class CartTotal extends StatelessWidget {
@@ -48,7 +49,9 @@ class CartTotal extends StatelessWidget {
                   elevation: AppSize.s0,
                   primary: Get.isDarkMode?pinkClr : mainColor,
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  Get.toNamed(Routes.paymentScreen);
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [

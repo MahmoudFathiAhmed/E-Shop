@@ -1,5 +1,3 @@
-import 'package:e_shop/logic/controllers/product_controller.dart';
-
 import '../../view/screens/auth/forgot_password_screen.dart';
 import '../../view/screens/auth/login_screen.dart';
 import '../../view/screens/auth/signup_screen.dart';
@@ -10,6 +8,7 @@ import '../logic/bindings/main_binding.dart';
 import '../logic/bindings/product_binding.dart';
 import '../view/screens/cart_screen.dart';
 import '../view/screens/main_screen.dart';
+import '../view/screens/payment_screen.dart';
 import '../view/screens/welcome_screen.dart';
 
 class AppRoutes{
@@ -55,6 +54,15 @@ class AppRoutes{
         ProductBinding(),
   ] ,
     ),
+    GetPage(
+      name: Routes.paymentScreen,
+      page: ()=> PaymentScreen(),
+      bindings:[
+        AuthBinding(),
+        ProductBinding(),
+        MainBinding(),
+  ] ,
+    ),
   ];
 }
 class Routes {
@@ -64,5 +72,6 @@ class Routes {
   static const forgotPasswordScreen = '/forgotPasswordScreen';
   static const mainScreen = '/mainScreen';
   static const cartScreen = '/cartScreen';
+  static const paymentScreen = '/paymentScreen';
 
 }

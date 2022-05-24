@@ -23,7 +23,18 @@ class AuthController extends GetxController{
   var isSignedIn = false;
   final GetStorage authBox = GetStorage();
 
-  // User? get userProfiloe => auth.currentUser;
+  User? get userProfile => auth.currentUser;
+
+  @override
+  void onInit() {
+    displayUserName.value =
+    (userProfile != null ? userProfile!.displayName : "")!;
+    displayUserPhoto.value =
+    (userProfile != null ? userProfile!.photoURL : "")!;
+    displayUserEmail.value = (userProfile != null ? userProfile!.email : "")!;
+
+    super.onInit();
+  }
 
   void visibility(){
     isVisibility = !isVisibility;

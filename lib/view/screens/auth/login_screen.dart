@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height / 1.3,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 25, right: 25, top: 40),
+                  padding: const EdgeInsets.only(left: AppPadding.p25, right: AppPadding.p25, top: AppPadding.p40),
                   child: Form(
                     key: fromKey,
                     child: Column(

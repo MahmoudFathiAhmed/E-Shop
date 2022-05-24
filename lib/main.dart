@@ -1,3 +1,4 @@
+import 'package:e_shop/language/localization.dart';
 import 'package:e_shop/logic/controllers/theme_controller.dart';
 import 'package:e_shop/utils/theme.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../routes/routes.dart';
+import 'utils/my_string.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +24,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'MFZ-Shop',
       debugShowCheckedModeBanner: false,
+      locale: Locale(GetStorage().read<String>('lang').toString()),
+      fallbackLocale: Locale(ene),
+      translations: LocalizationApp(),
       theme: ThemesApp.light,
       darkTheme: ThemesApp.dark,
       themeMode: ThemeController().themeDataGet,
