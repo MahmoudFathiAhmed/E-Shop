@@ -14,7 +14,6 @@ class CategoryScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: AppSize.s20, right: AppSize.s20),
       child: Column(
-        // ignore: prefer_const_literals_to_create_immutables
         children: [
           Align(
             alignment: Alignment.topLeft,

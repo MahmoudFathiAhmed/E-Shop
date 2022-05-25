@@ -156,7 +156,7 @@ class CardItems extends StatelessWidget {
                       height: AppSize.s20,
                       width: AppSize.s45,
                       decoration: BoxDecoration(
-                        color: mainColor,
+                        color: Get.isDarkMode?pinkClr:mainColor,
                         borderRadius: BorderRadius.circular(AppSize.s10),
                       ),
                       child: Padding(

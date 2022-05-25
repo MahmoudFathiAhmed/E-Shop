@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: context.theme.backgroundColor,
           body: Column(
             children: [
+              const SizedBox(height: AppSize.s10),
               Container(
                 width: double.infinity,
                 height: AppSize.s180,
@@ -25,13 +26,16 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(AppSize.s20),
                     bottomRight: Radius.circular(AppSize.s20),
+                    topLeft: Radius.circular(AppSize.s20),
+                    topRight: Radius.circular(AppSize.s20),
                   )
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: AppPadding.p20,right: AppPadding.p20),
+                  padding: const EdgeInsets.only(left: AppPadding.p20,right: AppPadding.p20,),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children:  [
+                      const SizedBox(height: AppSize.s14),
                       const TextUtils(
                           text: 'Find Your',
                           fontSize: AppSize.s25,

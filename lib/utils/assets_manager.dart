@@ -18,4 +18,13 @@ class ImageAssets{
   static const String  searchEmptyLight= "$imagePath/search_empty_light.png";
   static const String  shop= "$imagePath/shop.png";
   static const String  user= "$imagePath/user.png";
+  static const String  electronics= "$imagePath/electronics.png";
+  static const String  men= "$imagePath/men.png";
+  static const String  women= "$imagePath/women.png";
+  static const String  jewelry= "$imagePath/jewelry.png";
+  static const String  homeIc= "$imagePath/home_ic.svg";
+  static const String  favouritesIc= "$imagePath/favourites_ic.svg";
+  static const String  categoriesIc= "$imagePath/categories_ic.svg";
+  static const String  settingsIc= "$imagePath/settings_ic.svg";
+  static const String  shoppingCartIc= "$imagePath/shopping_cart_ic.svg";
 }

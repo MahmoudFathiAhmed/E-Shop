@@ -40,7 +40,7 @@ class CategoryWidget extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(AppSize.s10),
                       image: DecorationImage(
-                        image: NetworkImage(
+                        image: AssetImage(
                           controller.imageCategory[index],
                         ),
                         fit: BoxFit.cover,
