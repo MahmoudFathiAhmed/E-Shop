@@ -37,14 +37,14 @@ class HomeScreen extends StatelessWidget {
                     children:  [
                       const SizedBox(height: AppSize.s14),
                       const TextUtils(
-                          text: 'Find Your',
+                          text: 'Discover Our',
                           fontSize: AppSize.s25,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                       ),
                       const SizedBox(height: AppSize.s5,),
                       const TextUtils(
-                          text: 'INSPIRATION',
+                          text: 'UNIQUE PRODUCTS',
                           fontSize: AppSize.s28,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -55,14 +55,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: AppSize.s10,),
+              const SizedBox(height: AppSize.s30,),
                Padding(
                  padding: const EdgeInsets.only(left: AppPadding.p20),
                  child: Align(
                    alignment: Alignment.topLeft,
                    child: TextUtils(
                     text: 'Categories',
-                    fontSize: AppSize.s20,
+                    fontSize: AppSize.s25,
                     fontWeight: FontWeight.w500 ,
                     color: Get.isDarkMode? Colors.white:Colors.black,
               ),

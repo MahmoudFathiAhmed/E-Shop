@@ -39,6 +39,10 @@ class CategoryWidget extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(AppSize.s10),
+                      border: Border.all(
+                        color: Get.isDarkMode?pinkClr:mainColor,
+                        width: AppSize.s2,
+                      ),
                       image: DecorationImage(
                         image: AssetImage(
                           controller.imageCategory[index],
@@ -52,9 +56,9 @@ class CategoryWidget extends StatelessWidget {
                         alignment: Alignment.bottomLeft,
                         child: Text(
                           controller.categoryNameList[index],
-                          style: const TextStyle(
+                          style:  TextStyle(
                             backgroundColor: Colors.black38,
-                            color: Colors.white,
+                            color: Get.isDarkMode?pinkClr:yellowClr,
                             fontSize: AppSize.s22,
                             fontWeight: FontWeight.bold,
                           ),

@@ -27,4 +27,5 @@ class ImageAssets{
   static const String  categoriesIc= "$imagePath/categories_ic.svg";
   static const String  settingsIc= "$imagePath/settings_ic.svg";
   static const String  shoppingCartIc= "$imagePath/shopping_cart_ic.svg";
+  static const String  noSearchDark= "$imagePath/no_search_dark.png";
 }

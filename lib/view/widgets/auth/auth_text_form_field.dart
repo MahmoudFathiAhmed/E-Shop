@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/values_manager.dart';
 
@@ -24,6 +25,9 @@ class AuthTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: const TextStyle(
+        color: Colors.black
+      ),
       controller: controller,
       obscureText: obscureText,
       cursorColor: Colors.black,

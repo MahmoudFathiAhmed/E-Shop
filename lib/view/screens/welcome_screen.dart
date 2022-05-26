@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                     children: const [
                       TextUtils(
                         text: AppStrings.mfz,
-                        color: mainColor,
+                        color: yellowClr,
                         fontSize: AppSize.s35,
                         fontWeight: FontWeight.bold,
                       ),
@@ -123,7 +123,7 @@ class WelcomeScreen extends StatelessWidget {
                           text: AppStrings.signUp,
                           fontSize: AppSize.s18,
                           fontWeight: FontWeight.bold,
-                          color: mainColor,
+                          color: yellowClr,
                           underline: TextDecoration.underline,
                         ),
                     ),

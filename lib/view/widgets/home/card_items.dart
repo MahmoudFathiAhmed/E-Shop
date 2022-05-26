@@ -29,7 +29,7 @@ class CardItems extends StatelessWidget {
           child: controller.searchList.isEmpty &&
               controller.searchEditingController.text.isNotEmpty?
               Get.isDarkMode?
-              Image.asset(ImageAssets.searchEmptyDark):
+              Image.asset(ImageAssets.noSearchDark):
               Image.asset(ImageAssets.searchEmptyLight):
           GridView.builder(
               itemCount: controller.searchList.isEmpty?
@@ -95,9 +95,9 @@ class CardItems extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
+                color: Colors.grey.withOpacity(0.3),
                 spreadRadius: AppSize.s3,
-                blurRadius: AppSize.s5,
+                blurRadius: AppSize.s2,
               ),
             ]
           ),
@@ -128,7 +128,8 @@ class CardItems extends StatelessWidget {
                     ),
                   ),
                 ],
-              )),
+              ),
+              ),
               Container(
                 width: double.infinity,
                 height: AppSize.s140,
@@ -141,6 +142,7 @@ class CardItems extends StatelessWidget {
                 ),
 
               ),
+              const SizedBox(height: AppSize.s7,),
               Padding(
                 padding: const EdgeInsets.only(left: AppPadding.p15,right: AppPadding.p15, top: AppPadding.p5, ),
                 child: Row(

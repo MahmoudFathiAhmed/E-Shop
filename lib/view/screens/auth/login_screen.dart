@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                               text: AppStrings.lin,
                               color:
-                              Get.isDarkMode ? Colors.white : Colors.black,
+                              Get.isDarkMode ? Colors.white : yellowClr,
                             ),
                           ],
                         ),
@@ -86,7 +86,7 @@ class LoginScreen extends StatelessWidget {
                             color: pinkClr,
                             size: AppSize.s30,
                           )
-                              : Image.asset(ImageAssets.email),
+                              : const Icon(Icons.email,color: mainColor,),
                           suffixIcon: const Text(""),
                           hintText: AppStrings.email,
                           keyboardType: TextInputType.emailAddress,
@@ -113,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                                 color: pinkClr,
                                 size: AppSize.s30,
                               )
-                                  : Image.asset(ImageAssets.lock),
+                                  : const Icon(Icons.lock, color: mainColor,),
                               hintText: AppStrings.password,
                               suffixIcon: IconButton(
                                 onPressed: () {

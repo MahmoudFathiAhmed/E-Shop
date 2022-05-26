@@ -13,6 +13,9 @@ class SearchTextForm extends StatelessWidget {
     return GetBuilder<ProductController>(builder: (_)=>TextField(
       controller: controller.searchEditingController,
       cursorColor: Colors.black,
+      style: const TextStyle(
+        color: Colors.black,
+      ),
       keyboardType: TextInputType.text,
       onChanged: (searchName){
         controller.addSearchToList(searchName);

@@ -1,4 +1,6 @@
+
 import 'package:e_shop/logic/controllers/product_controller.dart';
+import 'package:e_shop/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -78,11 +80,16 @@ class FavouritesScreen extends StatelessWidget {
                 clipBehavior: Clip.antiAlias,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(AppSize.s10),
+                  side: BorderSide(
+                    color: Get.isDarkMode?pinkClr:mainColor,
+                    width: AppSize.s2,
+                    style: BorderStyle.solid
+                  ),
                 ),
                 child: AspectRatio(
                   aspectRatio: 1,
                   child: Image.network(image,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                   ),
                 ),
               ),

@@ -35,7 +35,7 @@ class CartProductCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(AppSize.s20),
               image: DecorationImage(
                 image: NetworkImage(productModels.image,),
-                fit: BoxFit.cover
+                fit: BoxFit.contain,
               )
             ),
           ),
