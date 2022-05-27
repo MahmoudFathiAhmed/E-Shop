@@ -4,6 +4,7 @@ import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../utils/strings_manager.dart';
 import '../../utils/values_manager.dart';
 import '../widgets/home/card_items.dart';
 
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: AppSize.s10),
               Container(
                 width: double.infinity,
-                height: AppSize.s180,
+                height: AppSize.s185,
                 decoration:  BoxDecoration(
                   color: Get.isDarkMode? darkGreyClr:mainColor,
                   borderRadius: const BorderRadius.only(
@@ -36,15 +37,15 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children:  [
                       const SizedBox(height: AppSize.s14),
-                      const TextUtils(
-                          text: 'Discover Our',
+                       TextUtils(
+                          text: AppStrings.discover.tr,
                           fontSize: AppSize.s25,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                       ),
                       const SizedBox(height: AppSize.s5,),
-                      const TextUtils(
-                          text: 'UNIQUE PRODUCTS',
+                       TextUtils(
+                          text: AppStrings.uniqueProducts.tr,
                           fontSize: AppSize.s28,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -55,22 +56,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: AppSize.s30,),
-               Padding(
-                 padding: const EdgeInsets.only(left: AppPadding.p20),
-                 child: Align(
-                   alignment: Alignment.topLeft,
-                   child: TextUtils(
-                    text: 'Categories',
-                    fontSize: AppSize.s25,
-                    fontWeight: FontWeight.w500 ,
-                    color: Get.isDarkMode? Colors.white:Colors.black,
-              ),
-                 ),
-               ),
-              const SizedBox(height: AppSize.s30,),
+              const SizedBox(height: AppSize.s20,),
               CardItems(),
-
+              const SizedBox(height: AppSize.s20,),
             ],
           ),
         ),

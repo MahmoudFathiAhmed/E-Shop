@@ -16,7 +16,8 @@ final TextDecoration underline;
           color: color,
         fontSize: fontSize,
         fontWeight: fontWeight,
-        decoration: underline
+        decoration: underline,
+        height: 1.2
       ),
 
     );

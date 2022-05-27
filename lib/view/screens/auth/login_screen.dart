@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                             TextUtils(
                               fontSize: AppSize.s28,
                               fontWeight: FontWeight.w500,
-                              text: AppStrings.log,
+                              text: AppStrings.log.tr,
                               color: Get.isDarkMode ? pinkClr : mainColor,
                             ),
                             const SizedBox(
@@ -58,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                             TextUtils(
                               fontSize: AppSize.s28,
                               fontWeight: FontWeight.w500,
-                              text: AppStrings.lin,
+                              text: AppStrings.lin.tr,
                               color:
                               Get.isDarkMode ? Colors.white : yellowClr,
                             ),
@@ -75,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                           obscureText: false,
                           validator: (value) {
                             if (!RegExp(validationEmail).hasMatch(value)) {
-                              return AppStrings.inValidEmail;
+                              return AppStrings.inValidEmail.tr;
                             } else {
                               return null;
                             }
@@ -86,9 +86,9 @@ class LoginScreen extends StatelessWidget {
                             color: pinkClr,
                             size: AppSize.s30,
                           )
-                              : const Icon(Icons.email,color: mainColor,),
+                              : const Icon(Icons.email,color: mainColor,size: AppSize.s30,),
                           suffixIcon: const Text(""),
-                          hintText: AppStrings.email,
+                          hintText: AppStrings.email.tr,
                           keyboardType: TextInputType.emailAddress,
                         ),
                         const SizedBox(
@@ -102,7 +102,7 @@ class LoginScreen extends StatelessWidget {
                               controller.isVisibility ? false : true,
                               validator: (value) {
                                 if (value.toString().length < AppSize.s6) {
-                                  return AppStrings.invalidPassword;
+                                  return AppStrings.invalidPassword.tr;
                                 } else {
                                   return null;
                                 }
@@ -113,8 +113,8 @@ class LoginScreen extends StatelessWidget {
                                 color: pinkClr,
                                 size: AppSize.s30,
                               )
-                                  : const Icon(Icons.lock, color: mainColor,),
-                              hintText: AppStrings.password,
+                                  : const Icon(Icons.lock, color: mainColor,size: AppSize.s30,),
+                              hintText: AppStrings.password.tr,
                               suffixIcon: IconButton(
                                 onPressed: () {
                                   controller.visibility();
@@ -139,7 +139,7 @@ class LoginScreen extends StatelessWidget {
                               Get.toNamed(Routes.forgotPasswordScreen);
                             },
                             child: TextUtils(
-                              text: AppStrings.isForgotPassword,
+                              text: AppStrings.isForgotPassword.tr,
                               fontSize: AppSize.s14,
                               color:
                               Get.isDarkMode ? Colors.white : Colors.black,
@@ -161,7 +161,7 @@ class LoginScreen extends StatelessWidget {
                                     email: email, password: password);
                               }
                             },
-                            text: AppStrings.login,
+                            text: AppStrings.login.tr,
                           );
                         }),
                         const SizedBox(
@@ -170,7 +170,7 @@ class LoginScreen extends StatelessWidget {
                         TextUtils(
                           fontSize: AppSize.s18,
                           fontWeight: FontWeight.w500,
-                          text: AppStrings.or,
+                          text: AppStrings.or.tr,
                           color: Get.isDarkMode ? Colors.white : Colors.black,
                         ),
                         const SizedBox(
@@ -208,8 +208,8 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               ContainerUnder(
-                text: AppStrings.noAccount,
-                textType: AppStrings.signUp,
+                text: AppStrings.noAccount.tr,
+                textType: AppStrings.signUp.tr,
                 onPressed: () {
                   Get.offNamed(Routes.signUpScreen);
                 },

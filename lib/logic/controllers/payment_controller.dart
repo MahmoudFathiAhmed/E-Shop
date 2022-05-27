@@ -2,9 +2,11 @@ import 'package:get/get.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 
+import '../../utils/strings_manager.dart';
+
 class PaymentController extends GetxController{
   var phoneNumber = ''.obs;
-  var address = 'Your Address'.obs;
+  var address = AppStrings.yourAddress.tr.obs;
 
   //location
 

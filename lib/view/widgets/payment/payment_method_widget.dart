@@ -1,6 +1,8 @@
+import 'package:e_shop/utils/strings_manager.dart';
 import 'package:e_shop/utils/theme.dart';
 import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/assets_manager.dart';
 import '../../../utils/values_manager.dart';
@@ -21,7 +23,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
       child: Column(
         children: [
           buildRadioPayment(
-            name: 'Paypal',
+            name: AppStrings.payPal.tr,
             image: ImageAssets.paypal,
             onChange: (int ? value){
               setState((){
@@ -33,7 +35,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
           ),
           const SizedBox(height: AppSize.s10,),
           buildRadioPayment(
-            name: 'Paypal',
+            name: AppStrings.googlePay.tr,
             image: ImageAssets.google,
             onChange: (int ? value){
               setState((){
@@ -45,7 +47,7 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
           ),
           const SizedBox(height: AppSize.s10,),
           buildRadioPayment(
-            name: 'Paypal',
+            name: AppStrings.creditCard.tr,
             image: ImageAssets.credit,
             onChange: (int ? value){
               setState((){

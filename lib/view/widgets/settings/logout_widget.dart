@@ -1,4 +1,5 @@
 import 'package:e_shop/logic/controllers/auth_controller.dart';
+import 'package:e_shop/utils/strings_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,13 +20,13 @@ class LogoutWidget extends StatelessWidget {
           child: InkWell(
             onTap: (){
               Get.defaultDialog(
-                title: "Log Out from App",
+                title: AppStrings.logoutFromApp.tr,
                 titleStyle: const TextStyle(
                   fontSize: AppSize.s18,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
-                middleText: 'Are you sure you need to logout?',
+                middleText: AppStrings.sureLogout.tr,
                 middleTextStyle: const TextStyle(
                   fontSize: AppSize.s18,
                   color: Colors.black,
@@ -33,9 +34,9 @@ class LogoutWidget extends StatelessWidget {
                 ),
                 backgroundColor: Colors.grey,
                 radius: AppSize.s10,
-                textCancel: " NO ",
+                textCancel: AppStrings.no.tr,
                 cancelTextColor: Colors.white,
-                textConfirm: " YES ",
+                textConfirm: AppStrings.yes.tr,
                 confirmTextColor: Colors.white,
                 onCancel: (){
                   Get.back();
@@ -66,7 +67,7 @@ class LogoutWidget extends StatelessWidget {
                 ),
                 const SizedBox(width: AppSize.s20,),
                 TextUtils(
-                  text: 'Logout'.tr,
+                  text: AppStrings.logout.tr,
                   fontSize: AppSize.s22,
                   fontWeight: FontWeight.bold,
                   color: Get.isDarkMode?Colors.white : Colors.black,

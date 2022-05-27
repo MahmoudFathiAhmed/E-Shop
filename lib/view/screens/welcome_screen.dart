@@ -21,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
             child: Image.asset(
-              ImageAssets.background,
+              ImageAssets.welcome,
               fit: BoxFit.cover,
             ),
           ),
@@ -30,10 +30,10 @@ class WelcomeScreen extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: AppSize.s100,
+                  height: AppSize.s80,
                 ),
                 Container(
                   height: AppSize.s60,
@@ -42,9 +42,9 @@ class WelcomeScreen extends StatelessWidget {
                     color: Colors.black.withOpacity(AppSize.s0_3),
                     borderRadius: BorderRadius.circular(AppSize.s5),
                   ),
-                  child: const Center(
+                  child:  Center(
                     child:  TextUtils(
-                      text: AppStrings.welcome,
+                      text: AppStrings.welcome.tr,
                       color: Colors.white,
                       fontSize: AppSize.s35,
                       fontWeight: FontWeight.bold,
@@ -63,16 +63,16 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      TextUtils(
+                    children:   [
+                      const TextUtils(
                         text: AppStrings.mfz,
                         color: yellowClr,
                         fontSize: AppSize.s35,
                         fontWeight: FontWeight.bold,
                       ),
-                      SizedBox(width: AppSize.s10,),
+                       const SizedBox(width: AppSize.s10,),
                       TextUtils(
-                        text: AppStrings.shop,
+                        text: AppStrings.shop.tr,
                         color: Colors.white,
                         fontSize: AppSize.s35,
                         fontWeight: FontWeight.bold,
@@ -81,7 +81,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: AppSize.s250,
+                  height: AppSize.s370,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -96,21 +96,21 @@ class WelcomeScreen extends StatelessWidget {
                     Get.offNamed(Routes.loginScreen);
                     // Get.toNamed(Routes.loginScreen);
                     },
-                    child: const TextUtils(
+                    child: TextUtils(
                       fontWeight: FontWeight.bold,
                       fontSize: AppSize.s22,
                       color: Colors.white,
-                      text: AppStrings.getStart,
+                      text: AppStrings.getStart.tr,
                     ),
                 ),
                 const SizedBox(
-                  height: AppSize.s30,
+                  height: AppSize.s5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const TextUtils(
-                        text: AppStrings.noAccount,
+                    TextUtils(
+                        text: AppStrings.noAccount.tr,
                         fontSize: AppSize.s18,
                         fontWeight: FontWeight.normal,
                         color: Colors.white,
@@ -119,8 +119,8 @@ class WelcomeScreen extends StatelessWidget {
                         onPressed: (){
                           Get.offNamed(Routes.signUpScreen);
                         },
-                        child: const TextUtils(
-                          text: AppStrings.signUp,
+                        child:  TextUtils(
+                          text: AppStrings.signUp.tr,
                           fontSize: AppSize.s18,
                           fontWeight: FontWeight.bold,
                           color: yellowClr,

@@ -129,14 +129,9 @@ class _ImageSlidersState extends State<ImageSliders> {
                     color: Get.isDarkMode? pinkClr.withOpacity(0.8): mainColor.withOpacity(0.8),
                     shape: BoxShape.circle,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: AppPadding.p10,
-                    ),
-                    child: Icon(Icons.arrow_back_ios,
-                      color: Get.isDarkMode?Colors.black:Colors.white,
-                      size: AppSize.s20,
-                    ),
+                  child: Icon(Icons.arrow_back_ios_sharp,
+                    color: Get.isDarkMode?Colors.black:Colors.white,
+                    size: AppSize.s20,
                   ),
                 ),
               ),

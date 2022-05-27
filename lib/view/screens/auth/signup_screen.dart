@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../routes/routes.dart';
-import '../../../utils/assets_manager.dart';
 import '../../../utils/strings_manager.dart';
 import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
@@ -40,7 +39,7 @@ class SignUpScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height / AppSize.s1_3,
                 child:  Padding(
@@ -52,52 +51,42 @@ class SignUpScreen extends StatelessWidget {
                   child: Form(
                     key: formKey,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          children:  [
-                            TextUtils(
-                              text: AppStrings.sign,
-                              fontSize: AppSize.s28,
-                              fontWeight: FontWeight.bold,
-                              color: Get.isDarkMode?  pinkClr: mainColor,
-                            ),
-                            const SizedBox(width: AppSize.s3,),
-                            TextUtils(
-                              text: AppStrings.up,
-                              fontSize: AppSize.s28,
-                              fontWeight: FontWeight.bold,
-                              color: Get.isDarkMode? Colors.white: Colors.black,
-                            ),
-
-                          ],
+                        TextUtils(
+                          text: AppStrings.signUp.tr,
+                          fontSize: AppSize.s28,
+                          fontWeight: FontWeight.bold,
+                          color: Get.isDarkMode?  pinkClr: mainColor,
                         ),
                         const SizedBox(height: AppSize.s50,),
                         AuthTextFormField(
                           controller: nameController,
                           validator: (value){
                             if( value.toString().length <= 2 || !RegExp(validationName).hasMatch(value) ){
-                              return AppStrings.inValidName;
+                              return AppStrings.inValidName.tr;
                             }else{
                               return null;
                             }
                           },
                           keyboardType: TextInputType.text,
-                          prefixIcon: Get.isDarkMode?const Icon(Icons.person,color: pinkClr,size: AppSize.s30,):Image.asset(ImageAssets.user),
-                          hintText: AppStrings.userName,
+                          prefixIcon: Get.isDarkMode?const Icon(Icons.person,color: pinkClr,size: AppSize.s30,):
+                          const Icon(Icons.person,color: mainColor,size: AppSize.s30,),
+                          hintText: AppStrings.userName.tr,
                         ),
                         const SizedBox(height: AppSize.s20,),
                         AuthTextFormField(
                           controller: emailController,
                           validator: (value){
                             if(!RegExp(validationEmail).hasMatch(value)){
-                              return AppStrings.inValidEmail;
+                              return AppStrings.inValidEmail.tr;
                             }else{
                               return null;
                             }
                           },
                           keyboardType: TextInputType.emailAddress,
-                          prefixIcon: Get.isDarkMode?const Icon(Icons.email,color: pinkClr,size: AppSize.s30,):Image.asset(ImageAssets.email),
-                          hintText: AppStrings.email,
+                          prefixIcon: Get.isDarkMode?const Icon(Icons.email,color: pinkClr,size: AppSize.s30,):const Icon(Icons.email,color: mainColor,size: AppSize.s30,),
+                          hintText: AppStrings.email.tr,
                         ),
                         const SizedBox(height: AppSize.s20,),
                         GetBuilder<AuthController>(
@@ -106,15 +95,15 @@ class SignUpScreen extends StatelessWidget {
                                 controller: passwordController,
                                 validator: (value){
                                   if(value.toString().length<=6){
-                                    return AppStrings.invalidPassword;
+                                    return AppStrings.invalidPassword.tr;
                                   }else{
                                     return null;
                                   }
                                 },
                                 keyboardType: TextInputType.visiblePassword,
-                                prefixIcon: Get.isDarkMode?const Icon(Icons.lock,color: pinkClr,size: AppSize.s30,):Image.asset(ImageAssets.lock),
+                                prefixIcon: Get.isDarkMode?const Icon(Icons.lock,color: pinkClr,size: AppSize.s30,):const Icon(Icons.lock,color: mainColor,size: AppSize.s30,),
                                 obscureText: controller.isVisibility?false:true,
-                                hintText: AppStrings.password,
+                                hintText: AppStrings.password.tr,
                                 suffixIcon: IconButton(
                                   onPressed: (){
                                     controller.visibility();
@@ -130,12 +119,12 @@ class SignUpScreen extends StatelessWidget {
                         const SizedBox(height: AppSize.s50,),
                         GetBuilder<AuthController>(builder: (_){
                           return AuthButton(
-                            text: AppStrings.signUp,
+                            text: AppStrings.signUp.tr,
                             onPressed: (){
                               if (controller.isCheckBox == false) {
                                 Get.snackbar(
-                                  AppStrings.checkBox,
-                                  AppStrings.termsAndConditions,
+                                  AppStrings.checkBox.tr,
+                                  AppStrings.termsAndConditions.tr,
                                   snackPosition: SnackPosition.BOTTOM,
                                   backgroundColor: Colors.green,
                                   colorText: Colors.white,
@@ -164,8 +153,8 @@ class SignUpScreen extends StatelessWidget {
                 onPressed: (){
                   Get.offNamed(Routes.loginScreen);
                 },
-                text: AppStrings.haveAccount,
-                textType: AppStrings.login,
+                text: AppStrings.haveAccount.tr,
+                textType: AppStrings.login.tr,
               ),
             ],
           ),

@@ -1,3 +1,4 @@
+import 'package:e_shop/utils/strings_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -33,13 +34,13 @@ class CartController extends GetxController{
 
   void clearAllProducts(){
     Get.defaultDialog(
-      title: "Clean Products",
+      title: AppStrings.clearProducts.tr,
       titleStyle: const TextStyle(
         fontSize: AppSize.s18,
         color: Colors.black,
         fontWeight: FontWeight.bold,
       ),
-      middleText: 'Are you sure you need to clear products?',
+      middleText: AppStrings.sureClearing.tr,
       middleTextStyle: const TextStyle(
         fontSize: AppSize.s18,
         color: Colors.black,
@@ -47,9 +48,9 @@ class CartController extends GetxController{
       ),
       backgroundColor: Colors.grey,
       radius: AppSize.s10,
-      textCancel: " NO ",
+      textCancel: AppStrings.no.tr,
       cancelTextColor: Colors.white,
-      textConfirm: " YES ",
+      textConfirm: AppStrings.yes.tr,
       confirmTextColor: Colors.white,
       onCancel: (){
         Get.toNamed(Routes.cartScreen);

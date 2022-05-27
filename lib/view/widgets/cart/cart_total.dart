@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../routes/routes.dart';
+import '../../../utils/strings_manager.dart';
 import '../../../utils/values_manager.dart';
 
 class CartTotal extends StatelessWidget {
@@ -20,8 +21,8 @@ class CartTotal extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const TextUtils(
-                text: 'Total',
+               TextUtils(
+                text: AppStrings.total.tr,
                 fontSize: AppSize.s16,
                 fontWeight: FontWeight.bold,
                 color: Colors.grey,
@@ -54,15 +55,15 @@ class CartTotal extends StatelessWidget {
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text('Check Out',
-                      style: TextStyle(
+                  children:  [
+                    Text(AppStrings.checkOut.tr,
+                      style: const TextStyle(
                           fontSize: AppSize.s20,
                           color: Colors.white
                       ),
                     ),
-                    SizedBox(width: AppSize.s10,),
-                    Icon(Icons.shopping_cart),
+                    const SizedBox(width: AppSize.s10,),
+                    const Icon(Icons.shopping_cart),
                   ],
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:e_shop/logic/controllers/cart_controller.dart';
 import 'package:e_shop/model/product_models.dart';
+import 'package:e_shop/utils/strings_manager.dart';
 import 'package:e_shop/utils/theme.dart';
 import 'package:e_shop/utils/values_manager.dart';
 import 'package:e_shop/view/widgets/text_utils.dart';
@@ -21,8 +22,8 @@ class AddCart extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const TextUtils(
-                  text: 'Price',
+              TextUtils(
+                  text: AppStrings.price.tr,
                   fontSize: AppSize.s16,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey,
@@ -54,15 +55,15 @@ class AddCart extends StatelessWidget {
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:const  [
-                    Text('Add To Cart',
-                      style: TextStyle(
+                  children: [
+                    Text(AppStrings.addToCart.tr,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontSize: AppSize.s20,
                       ),
                     ),
-                    SizedBox(width: AppSize.s10,),
-                    Icon(Icons.shopping_cart_outlined,
+                    const SizedBox(width: AppSize.s10,),
+                    const Icon(Icons.shopping_cart_outlined,
 
                     ),
                   ],

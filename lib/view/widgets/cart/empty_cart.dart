@@ -1,3 +1,4 @@
+import 'package:e_shop/utils/strings_manager.dart';
 import 'package:e_shop/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,7 +26,7 @@ class EmptyCart extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: 'Your Cart is ',
+                  text: AppStrings.yourCartIs.tr,
                   style: TextStyle(
                     color: Get.isDarkMode? Colors.white:Colors.black,
                     fontSize: AppSize.s30,
@@ -33,9 +34,9 @@ class EmptyCart extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: 'Empty',
+                  text: AppStrings.empty.tr,
                   style: TextStyle(
-                    color: Get.isDarkMode? pinkClr:mainColor,
+                    color: Get.isDarkMode? pinkClr:yellowClr,
                     fontSize: AppSize.s30,
                     fontWeight: FontWeight.bold,
                   ),
@@ -45,7 +46,7 @@ class EmptyCart extends StatelessWidget {
           ),
           const SizedBox(height: AppSize.s10,),
           Text(
-              "Add Items to get Started",
+              AppStrings.addItemsToGetStart.tr,
             style: TextStyle(
               color: Get.isDarkMode? Colors.white:Colors.black,
               fontSize: AppSize.s15,
@@ -67,8 +68,8 @@ class EmptyCart extends StatelessWidget {
                   primary: Get.isDarkMode? pinkClr : mainColor,
                 ),
                 child: Text(
-                  'Go To Home',
-                    style: TextStyle(
+                  AppStrings.goToHome.tr,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: AppSize.s20
                     ),

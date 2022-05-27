@@ -84,9 +84,9 @@ class CategoryItems extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.2),
-                spreadRadius: 3.0,
-                blurRadius: 5.0,
+                color: Colors.grey.withOpacity(0.3),
+                spreadRadius: AppSize.s3,
+                blurRadius: AppSize.s2,
               ),
             ],
           ),

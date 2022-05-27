@@ -35,13 +35,13 @@ class CheckWidget extends StatelessWidget {
           Row(
             children:  [
               TextUtils(
-                text: AppStrings.iAccept,
+                text: AppStrings.iAccept.tr,
                 fontSize: AppSize.s16,
                 fontWeight: FontWeight.normal,
                 color: Get.isDarkMode?Colors.white:Colors.black,
               ),
               TextUtils(
-                text: AppStrings.termsAndConditions,
+                text: AppStrings.termsAndConditions.tr,
                 fontSize: AppSize.s16,
                 fontWeight: FontWeight.normal,
                 color: Get.isDarkMode?Colors.white:Colors.black,

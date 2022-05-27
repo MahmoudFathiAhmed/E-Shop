@@ -32,10 +32,7 @@ String capitalize(String profileName){
       return;
     }
 
-    if (languageCode == frf) {
-      langLocal = frf;
-      saveLanguage(frf);
-    } else if (languageCode == ara) {
+    if (languageCode == ara) {
       langLocal = ara;
       saveLanguage(ara);
     } else {

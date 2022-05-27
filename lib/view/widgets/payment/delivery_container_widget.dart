@@ -1,5 +1,6 @@
 import 'package:e_shop/logic/controllers/auth_controller.dart';
 import 'package:e_shop/logic/controllers/payment_controller.dart';
+import 'package:e_shop/utils/strings_manager.dart';
 import 'package:e_shop/utils/theme.dart';
 import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
@@ -47,14 +48,14 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
         Obx(() => buildRadioContainer(
           address: controller.address.value,
           color: changeColors ? Colors.grey.shade300: Colors.white,
-          title: 'Delivery',
+          title: AppStrings.delivery.tr,
           name: authController.displayUserName.value,
           phone: controller.phoneNumber.value,
           value: 2,
           icon: InkWell(
             onTap: (){
               Get.defaultDialog(
-                  title: 'Enter your phone number',
+                  title: AppStrings.enterYourPhoneAddress.tr,
                   titleStyle: const TextStyle(
                     fontSize: AppSize.s16,
                     color: Colors.black,
@@ -84,7 +85,7 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                           },
                           icon: const Icon(Icons.close, color: Colors.black,),
                         ),
-                        hintText: 'Enter your phone number',
+                        hintText: AppStrings.enterYourPhoneAddress.tr,
                         hintStyle: const TextStyle(
                           color: Colors.black45,
                           fontSize: AppSize.s12,
@@ -110,10 +111,10 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                       ),
                     ),
                   ),
-                  textCancel: ' Cancel ',
+                  textCancel: AppStrings.cancel.tr,
                   cancelTextColor: Colors.black,
-                  textConfirm: ' Save ',
-                  confirmTextColor: Colors.black,
+                  textConfirm: AppStrings.save.tr,
+                  confirmTextColor: Colors.white,
                   onCancel: (){
                     Get.toNamed(Routes.paymentScreen);
                   },

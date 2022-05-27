@@ -5,6 +5,7 @@ import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../utils/strings_manager.dart';
 import '../../../utils/values_manager.dart';
 
 class DarkModeWidget extends StatelessWidget {
@@ -48,7 +49,7 @@ class DarkModeWidget extends StatelessWidget {
           ),
           const SizedBox(width: AppSize.s20,),
           TextUtils(
-            text: 'Dark Mode'.tr,
+            text: AppStrings.darkMode.tr,
             fontSize: AppSize.s22,
             fontWeight: FontWeight.bold,
             color: Get.isDarkMode?Colors.white : Colors.black,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/my_string.dart';
+import '../../../utils/strings_manager.dart';
 import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
 import '../text_utils.dart';
@@ -34,7 +35,7 @@ class LanguageWidget extends StatelessWidget {
               ),
               const SizedBox(width: AppSize.s20,),
               TextUtils(
-                text: 'Language'.tr,
+                text: AppStrings.language.tr,
                 fontSize: AppSize.s22,
                 fontWeight: FontWeight.bold,
                 color: Get.isDarkMode?Colors.white : Colors.black,
@@ -72,15 +73,6 @@ class LanguageWidget extends StatelessWidget {
                 DropdownMenuItem(
                   value: ara,
                   child: Text(arabic,
-                    style:  const TextStyle(
-                      fontSize: AppSize.s16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                DropdownMenuItem(
-                  value: frf,
-                  child: Text(france,
                     style:  const TextStyle(
                       fontSize: AppSize.s16,
                       fontWeight: FontWeight.bold,

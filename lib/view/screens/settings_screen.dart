@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../utils/strings_manager.dart';
 import '../../utils/theme.dart';
 import '../../utils/values_manager.dart';
 import '../../view/widgets/text_utils.dart';
@@ -26,7 +27,7 @@ class SettingsScreen extends StatelessWidget {
             thickness: AppSize.s2,
           ),
           TextUtils(
-            text: 'GENERAL'.tr,
+            text: AppStrings.general.tr,
             fontSize: AppSize.s18,
             fontWeight: FontWeight.bold,
             color: Get.isDarkMode?pinkClr: mainColor,

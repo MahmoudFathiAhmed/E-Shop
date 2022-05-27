@@ -3,6 +3,7 @@ import 'package:e_shop/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../utils/strings_manager.dart';
 import '../../utils/values_manager.dart';
 import '../widgets/cart/cart_product_card.dart';
 import '../widgets/cart/cart_total.dart';
@@ -19,7 +20,7 @@ class CartScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: context.theme.backgroundColor,
         appBar: AppBar(
-          title: const Text('Cart Items'),
+          title:  Text(AppStrings.cartItems.tr),
           centerTitle: true,
           elevation: AppSize.s0,
           backgroundColor: Get.isDarkMode ? darkGreyClr : mainColor,
@@ -34,7 +35,7 @@ class CartScreen extends StatelessWidget {
         ),
         body: Obx(() {
           if (controller.productsMap.isEmpty) {
-            return EmptyCart();
+            return const EmptyCart();
           } else {
             return SingleChildScrollView(
               child: Column(

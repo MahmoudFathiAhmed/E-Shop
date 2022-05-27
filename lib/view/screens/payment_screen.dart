@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../logic/controllers/cart_controller.dart';
+import '../../utils/strings_manager.dart';
 import '../../utils/theme.dart';
 import '../../utils/values_manager.dart';
 import '../widgets/payment/delivery_container_widget.dart';
@@ -8,14 +10,16 @@ import '../widgets/payment/payment_method_widget.dart';
 import '../widgets/text_utils.dart';
 
 class PaymentScreen extends StatelessWidget {
-  const PaymentScreen({Key? key}) : super(key: key);
+   PaymentScreen({Key? key}) : super(key: key);
+  final cartController = Get.find<CartController>();
+  // final paymentController = Get.find<PaymentController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.theme.backgroundColor,
       appBar: AppBar(
-        title: const Text('Payment'),
+        title: Text(AppStrings.payment.tr),
         centerTitle: true,
         elevation: AppSize.s0,
         backgroundColor: Get.isDarkMode ? darkGreyClr : mainColor,
@@ -30,23 +34,23 @@ class PaymentScreen extends StatelessWidget {
                 fontSize: AppSize.s24,
                 fontWeight: FontWeight.bold,
                 color: Get.isDarkMode? Colors.white:Colors.black,
-                text: 'Shipping To',
+                text: AppStrings.shippingTo.tr,
               ),
               const SizedBox(height: AppSize.s20,),
-              DeliveryContainerWidget(),
+              const DeliveryContainerWidget(),
               const SizedBox(height: AppSize.s20,),
               TextUtils(
                 fontSize: AppSize.s24,
                 fontWeight: FontWeight.bold,
                 color: Get.isDarkMode? Colors.white:Colors.black,
-                text: 'Payment Method',
+                text: AppStrings.paymentMethod.tr,
               ),
               const SizedBox(height: AppSize.s20,),
-              PaymentMethodWidget(),
+              const PaymentMethodWidget(),
               const SizedBox(height: AppSize.s30,),
               Center(
                 child: TextUtils(
-                  text: 'Total: 200\$',
+                  text: '${AppStrings.total.tr}: ${cartController.total}\$',
                   fontSize: AppSize.s22,
                   fontWeight: FontWeight.bold,
                   color: Get.isDarkMode? Colors.white:Colors.black,
@@ -67,8 +71,8 @@ class PaymentScreen extends StatelessWidget {
                     ),
                     onPressed: (){},
                     child:
-                        const Text('Pay Now',
-                          style: TextStyle(
+                         Text(AppStrings.payNow.tr,
+                          style: const TextStyle(
                               fontSize: AppSize.s22,
                               color: Colors.white
                           ),

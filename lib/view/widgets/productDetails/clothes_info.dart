@@ -6,6 +6,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:readmore/readmore.dart';
 
+import '../../../utils/strings_manager.dart';
 import '../../../utils/values_manager.dart';
 
 class ClothesInfo extends StatelessWidget {
@@ -87,8 +88,8 @@ class ClothesInfo extends StatelessWidget {
             trimLines: 3,
             textAlign: TextAlign.justify,
             trimMode: TrimMode.Line,
-            trimCollapsedText: "Show more",
-            trimExpandedText: "Show less",
+            trimCollapsedText: AppStrings.showMore.tr,
+            trimExpandedText: AppStrings.showLess.tr,
             lessStyle: TextStyle(
               fontWeight: FontWeight.bold,
               color: Get.isDarkMode? pinkClr:mainColor

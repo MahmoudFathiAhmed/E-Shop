@@ -2,6 +2,7 @@ import 'package:e_shop/logic/controllers/product_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../utils/strings_manager.dart';
 import '../../../utils/values_manager.dart';
 
 class SearchTextForm extends StatelessWidget {
@@ -15,6 +16,7 @@ class SearchTextForm extends StatelessWidget {
       cursorColor: Colors.black,
       style: const TextStyle(
         color: Colors.black,
+        height: 1.2
       ),
       keyboardType: TextInputType.text,
       onChanged: (searchName){
@@ -31,7 +33,7 @@ class SearchTextForm extends StatelessWidget {
           },
           icon: const Icon(Icons.close, color: Colors.black,),
         ): null,
-        hintText: 'Search With name & price',
+        hintText: AppStrings.searchNameAndPrice.tr,
         hintStyle: const TextStyle(
           color: Colors.black45,
           fontSize: AppSize.s16,
