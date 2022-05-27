@@ -28,6 +28,11 @@ const Map<String, String> en = {
   AppStrings.checkBox:'Check Box!',
   AppStrings.haveAccount:'Already have an Account?',
 
+  //forgot password screen
+  AppStrings.forgotPassword:'Forgot Password',
+  AppStrings.send:'Send',
+  AppStrings.recoverAccount:'If you want to recover your account, then please provide your email ID below..',
+
   //home Screen
   AppStrings.mfzShop:'M F Z Shop',
   AppStrings.discover:'Discover Our',

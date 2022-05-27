@@ -29,7 +29,7 @@ class ForgotPasswordScreen extends StatelessWidget {
           centerTitle: true,
           elevation: AppSize.s0,
           title: Text(
-            AppStrings.forgotPassword,
+            AppStrings.forgotPassword.tr,
             style: TextStyle(
               color: Get.isDarkMode ? pinkClr : mainColor,
             ),
@@ -67,7 +67,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     height: AppSize.s20,
                   ),
                   Text(
-                    AppStrings.recoverAccount,
+                    AppStrings.recoverAccount.tr,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Get.isDarkMode ? Colors.white : Colors.black,
@@ -88,7 +88,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     obscureText: false,
                     validator: (value) {
                       if (!RegExp(validationEmail).hasMatch(value)) {
-                        return AppStrings.inValidEmail;
+                        return AppStrings.inValidEmail.tr;
                       } else {
                         return null;
                       }
@@ -99,9 +99,12 @@ class ForgotPasswordScreen extends StatelessWidget {
                       color: pinkClr,
                       size: AppSize.s30,
                     )
-                        : Image.asset(ImageAssets.email),
+                        : const Icon(
+                      Icons.email,
+                      color: mainColor,
+                      size: AppSize.s30,),
                     suffixIcon: const Text(""),
-                    hintText: AppStrings.email,
+                    hintText: AppStrings.email.tr,
                     keyboardType: TextInputType.emailAddress,
                   ),
                   const SizedBox(
@@ -115,7 +118,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                           controller.resetPassword(email);
                         }
                       },
-                      text: AppStrings.send,
+                      text: AppStrings.send.tr,
                     );
                   }),
                 ],

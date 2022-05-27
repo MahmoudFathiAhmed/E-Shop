@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '../../utils/strings_manager.dart';
+
 class ThemeController {
   final GetStorage boxStorage = GetStorage();
-  final key = 'isDarkModes';
+  final key = AppStrings.isDarkModes;
 
   saveThemeDataInBox(bool isDark) {
     boxStorage.write(key, isDark);

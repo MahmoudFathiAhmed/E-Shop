@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/values_manager.dart';
+
 class TextUtils extends StatelessWidget {
   const TextUtils({Key? key, required this.text, required this.fontSize, required this.fontWeight, required this.color, this.underline= TextDecoration.none}) : super(key: key);
 final String text;
@@ -17,7 +19,7 @@ final TextDecoration underline;
         fontSize: fontSize,
         fontWeight: fontWeight,
         decoration: underline,
-        height: 1.2
+        height: AppSize.s1_2
       ),
 
     );

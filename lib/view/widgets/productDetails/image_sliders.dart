@@ -31,22 +31,22 @@ class _ImageSlidersState extends State<ImageSliders> {
     kColor3,
     kColor4,
   ];
-  int currentPage = 0;
-  int currentColor = 0;
+  int currentPage = AppCount.c0;
+  int currentColor = AppCount.c0;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         CarouselSlider.builder(
-            itemCount: 3,
+            itemCount: AppCount.c3,
           carouselController: carouselController,
           options: CarouselOptions(
-            height: 500,
+            height: AppSize.s500,
             autoPlay: true,
             enlargeCenterPage: true,
             enableInfiniteScroll: false,
-            viewportFraction: 1,
-            autoPlayInterval: const Duration(seconds: 2),
+            viewportFraction: AppSize.s1,
+            autoPlayInterval: const Duration(seconds: AppCount.c2),
             onPageChanged: (index, reason){
               setState((){
                 currentPage = index;
@@ -73,8 +73,8 @@ class _ImageSlidersState extends State<ImageSliders> {
               activeIndex: currentPage,
               count: 3,
               effect: ExpandingDotsEffect(
-                dotWidth: 10,
-                dotHeight: 10,
+                dotWidth: AppSize.s10,
+                dotHeight: AppSize.s10,
                 activeDotColor: Get.isDarkMode? pinkClr: mainColor,
                 dotColor: Colors.black,
               ),

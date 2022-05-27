@@ -1,3 +1,4 @@
+import 'package:e_shop/utils/strings_manager.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -21,10 +22,10 @@ String capitalize(String profileName){
   }
 
   void saveLanguage(String lang)async{
-    await storage.write("lang", lang );
+    await storage.write(AppStrings.lang, lang );
   }
   Future <String>get getLanguage async{
-    return await storage.read("lang");
+    return await storage.read(AppStrings.lang);
   }
   void changeLanguage(String languageCode){
     saveLanguage(languageCode);

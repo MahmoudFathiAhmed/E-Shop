@@ -13,7 +13,7 @@ class SizeList extends StatefulWidget {
 
 class _SizeListState extends State<SizeList> {
   final List<String> sizeList = ['S', 'M', 'L', 'XL', 'XXl'];
-  var currentSelected = 0;
+  var currentSelected = AppCount.c0;
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +34,12 @@ class _SizeListState extends State<SizeList> {
               decoration: BoxDecoration(
                 color: Get.isDarkMode?
                 currentSelected ==index?
-                pinkClr.withOpacity(0.4):Colors.black:
+                pinkClr.withOpacity(AppSize.s0_4):Colors.black:
                 currentSelected ==index?
-                mainColor.withOpacity(0.4):Colors.white,
+                mainColor.withOpacity(AppSize.s0_4):Colors.white,
                 borderRadius: BorderRadius.circular(AppSize.s15),
                 border: Border.all(
-                  color: Colors.grey.withOpacity(0.4),
+                  color: Colors.grey.withOpacity(AppSize.s0_4),
                   width: AppSize.s2,
                 ),
               ),

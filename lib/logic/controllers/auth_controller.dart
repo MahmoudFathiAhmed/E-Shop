@@ -103,7 +103,7 @@ class AuthController extends GetxController{
       displayUserName.value = auth.currentUser!.displayName!);
 
       isSignedIn = true;
-      authBox.write("auth", isSignedIn);
+      authBox.write(AppStrings.auth, isSignedIn);
 
       update();
       Get.offNamed(Routes.mainScreen);
@@ -113,7 +113,7 @@ class AuthController extends GetxController{
 
       if (error.code == AppStrings.userNotFoundCode) {
         message =
-        ' Account does not exists for that $email.. Create your account by signing up..';
+        '${AppStrings.accountDoesNotExistForThat}$email..${AppStrings.createYourAccountBySigningUp}';
       } else if (error.code == AppStrings.wrongPasswordCode) {
         message = AppStrings.wrongPasswordMessage;
       } else {
@@ -128,7 +128,7 @@ class AuthController extends GetxController{
       );
     } catch (error) {
       Get.snackbar(
-        'Error!',
+        AppStrings.error,
         error.toString(),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.green,
@@ -154,13 +154,13 @@ class AuthController extends GetxController{
       await auth.signInWithCredential(credential);
 
       isSignedIn = true;
-      authBox.write("auth", isSignedIn);
+      authBox.write(AppStrings.auth, isSignedIn);
       update();
 
       Get.offNamed(Routes.mainScreen);
     } catch (error) {
       Get.snackbar(
-        'Error!',
+        AppStrings.error,
         error.toString(),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.green,
@@ -175,7 +175,7 @@ class AuthController extends GetxController{
       final data = await FacebookAuth.instance.getUserData();
       faceBookModel = FaceBookModel.fromJson(data);
       isSignedIn = true;
-      authBox.write("auth", isSignedIn);
+      authBox.write(AppStrings.auth, isSignedIn);
       update();
       Get.offNamed(Routes.mainScreen);
     }
@@ -191,9 +191,9 @@ class AuthController extends GetxController{
       String title = error.code.replaceAll(RegExp('-'), ' ').capitalize!;
       String message = '';
 
-      if (error.code == 'user-not-found') {
+      if (error.code == AppStrings.userNotFoundCode) {
         message =
-        ' Account does not exists for that $email.. Create your account by signing up..';
+        '${AppStrings.accountDoesNotExistForThat}$email${AppStrings.createYourAccountBySigningUp}';
       } else {
         message = error.message.toString();
       }
@@ -206,7 +206,7 @@ class AuthController extends GetxController{
       );
     } catch (error) {
       Get.snackbar(
-        'Error!',
+        AppStrings.error,
         error.toString(),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.green,
@@ -224,13 +224,13 @@ class AuthController extends GetxController{
       displayUserPhoto.value = '';
       //displayUserEmail.value = '';
       isSignedIn = false;
-      authBox.remove("auth");
+      authBox.remove(AppStrings.auth);
       update();
 
       Get.offNamed(Routes.welcomeScreen);
     } catch (error) {
       Get.snackbar(
-        'Error!',
+        AppStrings.error,
         error.toString(),
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.green,

@@ -81,7 +81,7 @@ class CartProductCard extends StatelessWidget {
                  ),
                  Text(
                      '$quantity',
-                   style: TextStyle(
+                   style: const TextStyle(
                      color: Colors.black,
                      fontSize: AppSize.s16,
                      fontWeight: FontWeight.bold,

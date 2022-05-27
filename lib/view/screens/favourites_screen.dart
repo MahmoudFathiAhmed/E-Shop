@@ -72,7 +72,7 @@ class FavouritesScreen extends StatelessWidget {
       padding: const EdgeInsets.all(AppSize.s10),
       child: SizedBox(
         width: double.infinity,
-        height: 100,
+        height: AppSize.s100,
         child: Row(
           children: [
             SizedBox(

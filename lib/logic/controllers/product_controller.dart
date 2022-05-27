@@ -4,6 +4,7 @@ import 'package:get_storage/get_storage.dart';
 
 import '../../model/product_models.dart';
 import '../../services/product_services.dart';
+import '../../utils/strings_manager.dart';
 
 
 class ProductController extends GetxController{
@@ -18,7 +19,7 @@ class ProductController extends GetxController{
   @override
   void onInit(){
     super.onInit();
-    List? storedShoppings =  storage.read<List>('isFavouritesList');
+    List? storedShoppings =  storage.read<List>(AppStrings.isFavouritesList);
     if(storedShoppings != null){
       favouritesList = storedShoppings.map((e) => ProductModels.fromJson(e)).toList().obs;
     }
@@ -42,10 +43,10 @@ class ProductController extends GetxController{
     var existingIndex = favouritesList.indexWhere((element) => element.id == productId);
     if(existingIndex >= 0 ){
       favouritesList.removeAt(existingIndex);
-      await storage.remove('isFavouritesList');
+      await storage.remove(AppStrings.isFavouritesList);
     }else{
       favouritesList.add(productList.firstWhere((element) => element.id == productId));
-      await storage.write('isFavouritesList', favouritesList);
+      await storage.write(AppStrings.isFavouritesList, favouritesList);
     }
 }
 

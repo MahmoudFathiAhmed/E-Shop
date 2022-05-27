@@ -11,7 +11,6 @@ class AppStrings{
   static const lin= 'IN';
   static const email= 'email';
   static const password= 'password';
-  static const forgotPassword= 'Forgot Password';//no translation
   static const isForgotPassword= 'Forgot Password?';
   static const login= 'LOGIN';
   static const or= 'OR';
@@ -28,6 +27,11 @@ class AppStrings{
 
   static const sign= 'Sign';//no translation
   static const up= 'Up';//no translation
+
+  //forgot password screen
+  static const forgotPassword= 'Forgot Password';
+  static const send= 'Send';
+  static const recoverAccount= 'If you want to recover your account, then please provide your email ID below..';
 
   //home Screen
   static const mfzShop= 'M F Z Shop';
@@ -78,15 +82,30 @@ class AppStrings{
   static const creditCard = "Credit Card";
 
 
-  //
-  static const send= 'Send';
-  static const recoverAccount= 'If you want to recover your account, then please provide your email ID below..';
+  //auth controller (no translations)
   static const weekPasswordErrorCode= 'weak-password';
   static const weekPasswordErrorMessage= 'Provided Password is too weak.. ';
   static const emailAlreadyUsedCode= 'email-already-in-use';
   static const emailAlreadyUsedMessage= ' Account Already exists for that email.. ';
   static const error= 'Error!';
+  static const auth= 'auth';
+  static const accountDoesNotExistForThat= ' Account does not exists for that ';
+  static const createYourAccountBySigningUp= '.. Create your account by signing up..';
   static const userNotFoundCode= 'user-not-found';
   static const wrongPasswordCode= 'wrong-password';
   static const wrongPasswordMessage= ' Invalid Password... PLease try again! ';
+
+  //payment controller (no translations)
+  static const locationServiceAreDisabled = 'Location services are disabled.';
+  static const locationPermissionsAreDenied= 'Location permissions are denied';
+  static const locationPermissionsArePermanentlyDenied= 'Location permissions are permanently denied, we cannot request permissions.';
+
+  //product controller (no translations)
+  static const isFavouritesList = 'isFavouritesList';
+
+  //settings controller (no translations)
+  static const lang = 'lang';
+
+  //theme controller (no translations)
+  static const isDarkModes = 'isDarkModes';
 }

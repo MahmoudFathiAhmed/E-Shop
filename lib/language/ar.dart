@@ -28,6 +28,11 @@ const Map<String, String> ar = {
   AppStrings.checkBox:'خانة الإختيار',
   AppStrings.haveAccount:'هل لديك حساب بالفعل',
 
+  //forgot password screen
+  AppStrings.forgotPassword:'نسيت كلمه السر',
+  AppStrings.send:'أرسل',
+  AppStrings.recoverAccount:'إذا أردت إستعاده حسابك. من فضلك قم بادراج بريدك الالكتروني بالاسفل',
+
   //home Screen
   AppStrings.mfzShop:'متجر M F Z',
   AppStrings.discover:'إكتشــف',

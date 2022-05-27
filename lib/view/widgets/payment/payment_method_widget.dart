@@ -15,7 +15,7 @@ class PaymentMethodWidget extends StatefulWidget {
 }
 
 class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
-  int radioPaymentIndex = 1;
+  int radioPaymentIndex = AppCount.c1;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,8 +30,8 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                 radioPaymentIndex = value!;
               });
             },
-            scale: 0.7,
-            value: 1,
+            scale: AppSize.s0_7,
+            value: AppCount.c1,
           ),
           const SizedBox(height: AppSize.s10,),
           buildRadioPayment(
@@ -42,8 +42,8 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                 radioPaymentIndex = value!;
               });
             },
-            scale: 0.99,
-            value: 2,
+            scale: AppSize.s0_99,
+            value: AppCount.c2,
           ),
           const SizedBox(height: AppSize.s10,),
           buildRadioPayment(
@@ -54,8 +54,8 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                 radioPaymentIndex = value!;
               });
             },
-            scale: 0.7,
-            value: 3,
+            scale: AppSize.s0_7,
+            value: AppCount.c3,
           ),
         ],
       ),
