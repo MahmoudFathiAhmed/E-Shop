@@ -5,6 +5,7 @@ import 'package:e_shop/utils/values_manager.dart';
 import 'package:e_shop/view/screens/product_details_screen.dart';
 import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../logic/controllers/cart_controller.dart';
@@ -28,9 +29,13 @@ class CardItems extends StatelessWidget {
         return Expanded(
           child: controller.searchList.isEmpty &&
               controller.searchEditingController.text.isNotEmpty?
-              Get.isDarkMode?
-              Image.asset(ImageAssets.noSearchDark):
-              Image.asset(ImageAssets.searchEmptyLight):
+              SizedBox(
+                height: AppSize.s100,
+                width: AppSize.s100,
+                child: SvgPicture.asset(ImageAssets.noResultsIc,
+                  color: Get.isDarkMode?pinkClr:mainColor,
+                ),
+              ):
           GridView.builder(
               itemCount: controller.searchList.isEmpty?
               controller.productList.length:

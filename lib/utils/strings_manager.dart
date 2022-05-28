@@ -81,6 +81,8 @@ class AppStrings{
   static const googlePay = "Google Pay";
   static const creditCard = "Credit Card";
 
+  //favourites screen
+  static const pleaseAddYourFavouriteProducts = 'please add your favourite products';
 
   //auth controller (no translations)
   static const weekPasswordErrorCode= 'weak-password';

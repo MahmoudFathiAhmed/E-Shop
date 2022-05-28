@@ -16,7 +16,7 @@ class SearchTextForm extends StatelessWidget {
       cursorColor: Colors.black,
       style: const TextStyle(
         color: Colors.black,
-        height: 1.2
+        height: AppSize.s1_2
       ),
       keyboardType: TextInputType.text,
       onChanged: (searchName){

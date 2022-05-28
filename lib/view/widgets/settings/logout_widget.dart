@@ -1,8 +1,10 @@
 import 'package:e_shop/logic/controllers/auth_controller.dart';
 import 'package:e_shop/utils/strings_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../../../utils/assets_manager.dart';
 import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
 import '../text_utils.dart';
@@ -56,12 +58,14 @@ class LogoutWidget extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(AppSize.s6),
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: logOutSettings,
+                    color: Get.isDarkMode?logOutSettings:mainColor,
                   ),
-                  child: const Icon(
-                    Icons.logout,
+                  child: SvgPicture.asset(
+                    ImageAssets.logoutIc,
+                    height: AppSize.s28,
+                    width: AppSize.s28,
                     color: Colors.white,
                   ),
                 ),

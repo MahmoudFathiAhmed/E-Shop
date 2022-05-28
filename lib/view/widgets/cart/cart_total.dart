@@ -71,6 +71,7 @@ class CartTotal extends StatelessWidget {
           ),
         ],
       ),
-    ));
+    ),
+    );
   }
 }

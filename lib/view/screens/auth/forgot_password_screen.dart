@@ -1,3 +1,5 @@
+import 'package:flutter_svg/flutter_svg.dart';
+
 import '../../../utils/assets_manager.dart';
 import '../../../utils/strings_manager.dart';
 import '../../../utils/values_manager.dart';
@@ -76,9 +78,11 @@ class ForgotPasswordScreen extends StatelessWidget {
                   const SizedBox(
                     height: AppSize.s50,
                   ),
-                  Image.asset(
-                    ImageAssets.forgotPass,
+                  SvgPicture.asset(
+                    ImageAssets.forgotPassword,
                     width: AppSize.s250,
+                    height: AppSize.s250,
+                    color: Get.isDarkMode?Colors.white:mainColor,
                   ),
                   const SizedBox(
                     height: AppSize.s50,

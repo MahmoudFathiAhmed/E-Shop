@@ -2,9 +2,11 @@
 import 'package:e_shop/logic/controllers/product_controller.dart';
 import 'package:e_shop/utils/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../utils/assets_manager.dart';
+import '../../utils/strings_manager.dart';
 import '../../utils/values_manager.dart';
 
 class FavouritesScreen extends StatelessWidget {
@@ -23,10 +25,12 @@ class FavouritesScreen extends StatelessWidget {
               SizedBox(
                 height: AppSize.s100,
                 width: AppSize.s100,
-                child: Image.asset(ImageAssets.heart),
+                child: SvgPicture.asset(ImageAssets.addFavouritesIc,
+                  color: Get.isDarkMode?pinkClr:mainColor,
+                ),
               ),
               const SizedBox(height: AppSize.s20,),
-              Text('please add your favourite products',
+              Text(AppStrings.pleaseAddYourFavouriteProducts.tr,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Get.isDarkMode?Colors.white:Colors.black,

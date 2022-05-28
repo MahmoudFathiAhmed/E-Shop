@@ -87,6 +87,9 @@ const Map<String, String> en = {
   AppStrings.googlePay: 'Google Pay',
   AppStrings.creditCard: 'Credit Card',
 
+  //favourites screen
+  AppStrings.pleaseAddYourFavouriteProducts:'please add your favourite products',
+
 
 
 };

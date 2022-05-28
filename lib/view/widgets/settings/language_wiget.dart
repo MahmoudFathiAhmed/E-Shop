@@ -1,7 +1,9 @@
 import 'package:e_shop/logic/controllers/settings_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../../../utils/assets_manager.dart';
 import '../../../utils/my_string.dart';
 import '../../../utils/strings_manager.dart';
 import '../../../utils/theme.dart';
@@ -24,12 +26,14 @@ class LanguageWidget extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.all(AppSize.s6),
-                decoration: const BoxDecoration(
+                decoration:  BoxDecoration(
                   shape: BoxShape.circle,
-                  color: languageSettings,
+                  color: Get.isDarkMode?languageSettings:mainColor,
                 ),
-                child: const Icon(
-                  Icons.language,
+                child: SvgPicture.asset(
+                  ImageAssets.languageIc,
+                  height: AppSize.s28,
+                  width: AppSize.s28,
                   color: Colors.white,
                 ),
               ),

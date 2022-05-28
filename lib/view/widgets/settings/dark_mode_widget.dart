@@ -1,8 +1,10 @@
 import 'package:e_shop/logic/controllers/settings_controller.dart';
 import 'package:e_shop/logic/controllers/theme_controller.dart';
+import 'package:e_shop/utils/assets_manager.dart';
 import 'package:e_shop/utils/theme.dart';
 import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/strings_manager.dart';
@@ -38,14 +40,20 @@ class DarkModeWidget extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.all(AppSize.s6),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: darkSettings,
+              color: Get.isDarkMode?darkSettings:mainColor,
             ),
-            child: const Icon(
-              Icons.dark_mode,
+            child: SvgPicture.asset(
+              ImageAssets.darkModeIc,
+              height: AppSize.s28,
+              width: AppSize.s28,
               color: Colors.white,
             ),
+            // const Icon(
+            //   Icons.dark_mode,
+            //   color: Colors.white,
+            // ),
           ),
           const SizedBox(width: AppSize.s20,),
           TextUtils(

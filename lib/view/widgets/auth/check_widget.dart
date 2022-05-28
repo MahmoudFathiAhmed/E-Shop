@@ -3,8 +3,6 @@ import 'package:e_shop/logic/controllers/auth_controller.dart';
 import '../../../utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../utils/assets_manager.dart';
 import '../../../utils/strings_manager.dart';
 import '../../../utils/values_manager.dart';
 import '../../../view/widgets/text_utils.dart';
@@ -28,7 +26,9 @@ class CheckWidget extends StatelessWidget {
                 color: Colors.grey.shade200,
                 borderRadius: BorderRadius.circular(AppSize.s10),
               ),
-              child: controller.isCheckBox? Get.isDarkMode?Image.asset(ImageAssets.check):const Icon(Icons.done, color: pinkClr, size: AppSize.s30,):Container(),
+              child: controller.isCheckBox? Get.isDarkMode?
+              const Icon(Icons.done, color: mainColor, size: AppSize.s30,)
+                  :const Icon(Icons.done, color: pinkClr, size: AppSize.s30,):Container(),
             ),
           ),
           const SizedBox(width:AppSize.s10),

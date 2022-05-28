@@ -86,4 +86,7 @@ const Map<String, String> ar = {
   AppStrings.payPal: 'باى بال',
   AppStrings.googlePay: 'جوجل باي',
   AppStrings.creditCard: 'بطاقة إئتمانية',
+
+  //favourites screen
+  AppStrings.pleaseAddYourFavouriteProducts: 'please add your favourite products',
 };
