@@ -1,11 +1,12 @@
-import 'package:e_shop/logic/controllers/cart_controller.dart';
-import 'package:e_shop/model/product_models.dart';
-import 'package:e_shop/utils/strings_manager.dart';
-import 'package:e_shop/utils/theme.dart';
-import 'package:e_shop/utils/values_manager.dart';
-import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../logic/controllers/cart_controller.dart';
+import '../../../model/product_models.dart';
+import '../../../utils/strings_manager.dart';
+import '../../../utils/theme.dart';
+import '../../../utils/values_manager.dart';
+import '../../../view/widgets/text_utils.dart';
 
 class AddCart extends StatelessWidget {
   final double price;

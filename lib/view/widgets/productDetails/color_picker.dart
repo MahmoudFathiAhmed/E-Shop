@@ -1,4 +1,4 @@
-import 'package:e_shop/utils/values_manager.dart';
+import '../../../utils/values_manager.dart';
 import 'package:flutter/material.dart';
 
 class ColorPicker extends StatelessWidget {

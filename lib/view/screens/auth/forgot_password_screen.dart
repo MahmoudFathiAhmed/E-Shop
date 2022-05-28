@@ -1,15 +1,13 @@
-import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../utils/assets_manager.dart';
-import '../../../utils/strings_manager.dart';
-import '../../../utils/values_manager.dart';
-
-import '../../../logic/controllers/auth_controller.dart';
-import '../../../utils/my_string.dart';
-import '../../../utils/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../../../logic/controllers/auth_controller.dart';
+import '../../../utils/assets_manager.dart';
+import '../../../utils/my_string.dart';
+import '../../../utils/strings_manager.dart';
+import '../../../utils/theme.dart';
+import '../../../utils/values_manager.dart';
 import '../../widgets/auth/auth_button.dart';
 import '../../widgets/auth/auth_text_form_field.dart';
 

@@ -1,11 +1,11 @@
-import 'package:e_shop/utils/strings_manager.dart';
-import 'package:e_shop/utils/theme.dart';
-import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/assets_manager.dart';
+import '../../../utils/strings_manager.dart';
+import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
+import '../../../view/widgets/text_utils.dart';
 
 class PaymentMethodWidget extends StatefulWidget {
   const PaymentMethodWidget({Key? key}) : super(key: key);

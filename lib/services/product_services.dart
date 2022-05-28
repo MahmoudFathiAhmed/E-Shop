@@ -1,4 +1,4 @@
-import 'package:e_shop/utils/my_string.dart';
+import '../utils/my_string.dart';
 import 'package:http/http.dart' as http;
 
 import '../model/product_models.dart';

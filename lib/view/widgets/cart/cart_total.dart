@@ -1,12 +1,12 @@
-import 'package:e_shop/logic/controllers/cart_controller.dart';
-import 'package:e_shop/utils/theme.dart';
-import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../logic/controllers/cart_controller.dart';
 import '../../../routes/routes.dart';
 import '../../../utils/strings_manager.dart';
+import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
+import '../../../view/widgets/text_utils.dart';
 
 class CartTotal extends StatelessWidget {
   CartTotal({Key? key}) : super(key: key);

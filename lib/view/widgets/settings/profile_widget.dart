@@ -1,10 +1,10 @@
-import '../../../logic/controllers/auth_controller.dart';
-import '../../../logic/controllers/settings_controller.dart';
-import '../../../view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../logic/controllers/auth_controller.dart';
+import '../../../logic/controllers/settings_controller.dart';
 import '../../../utils/values_manager.dart';
+import '../../../view/widgets/text_utils.dart';
 
 class ProfileWidget extends StatelessWidget {
   ProfileWidget({Key? key}) : super(key: key);

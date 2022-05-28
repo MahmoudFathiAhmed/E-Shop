@@ -1,9 +1,9 @@
-import 'package:e_shop/utils/strings_manager.dart';
-import 'package:e_shop/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../routes/routes.dart';
+import '../../../utils/strings_manager.dart';
+import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
 
 class EmptyCart extends StatelessWidget {

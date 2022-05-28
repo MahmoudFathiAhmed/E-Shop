@@ -1,8 +1,8 @@
-import 'package:e_shop/services/category_services.dart';
-import 'package:e_shop/utils/assets_manager.dart';
 import 'package:get/get.dart';
 
 import '../../model/product_models.dart';
+import '../../services/category_services.dart';
+import '../../utils/assets_manager.dart';
 
 class CategoryController extends GetxController{
 

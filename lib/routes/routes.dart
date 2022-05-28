@@ -1,8 +1,8 @@
+import 'package:get/get.dart';
+
 import '../../view/screens/auth/forgot_password_screen.dart';
 import '../../view/screens/auth/login_screen.dart';
 import '../../view/screens/auth/signup_screen.dart';
-import 'package:get/get.dart';
-
 import '../logic/bindings/auth_binding.dart';
 import '../logic/bindings/main_binding.dart';
 import '../logic/bindings/product_binding.dart';

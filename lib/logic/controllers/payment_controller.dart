@@ -1,6 +1,6 @@
-import 'package:get/get.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:get/get.dart';
 
 import '../../utils/strings_manager.dart';
 

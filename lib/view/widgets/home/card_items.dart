@@ -1,15 +1,15 @@
-import 'package:e_shop/logic/controllers/product_controller.dart';
-import 'package:e_shop/model/product_models.dart';
-import 'package:e_shop/utils/theme.dart';
-import 'package:e_shop/utils/values_manager.dart';
-import 'package:e_shop/view/screens/product_details_screen.dart';
-import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../logic/controllers/cart_controller.dart';
+import '../../../logic/controllers/product_controller.dart';
+import '../../../model/product_models.dart';
 import '../../../utils/assets_manager.dart';
+import '../../../utils/theme.dart';
+import '../../../utils/values_manager.dart';
+import '../../../view/screens/product_details_screen.dart';
+import '../../../view/widgets/text_utils.dart';
 
 class CardItems extends StatelessWidget {
    CardItems({Key? key}) : super(key: key);

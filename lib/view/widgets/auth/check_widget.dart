@@ -1,9 +1,9 @@
-import 'package:e_shop/logic/controllers/auth_controller.dart';
-
-import '../../../utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../logic/controllers/auth_controller.dart';
 import '../../../utils/strings_manager.dart';
+import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
 import '../../../view/widgets/text_utils.dart';
 

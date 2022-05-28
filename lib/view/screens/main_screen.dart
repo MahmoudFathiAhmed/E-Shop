@@ -1,5 +1,4 @@
 import 'package:badges/badges.dart';
-import 'package:e_shop/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -7,6 +6,7 @@ import 'package:get/get.dart';
 import '../../logic/controllers/cart_controller.dart';
 import '../../logic/controllers/main_controller.dart';
 import '../../routes/routes.dart';
+import '../../utils/assets_manager.dart';
 import '../../utils/theme.dart';
 import '../../utils/values_manager.dart';
 

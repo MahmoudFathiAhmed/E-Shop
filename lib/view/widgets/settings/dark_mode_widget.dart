@@ -1,14 +1,14 @@
-import 'package:e_shop/logic/controllers/settings_controller.dart';
-import 'package:e_shop/logic/controllers/theme_controller.dart';
-import 'package:e_shop/utils/assets_manager.dart';
-import 'package:e_shop/utils/theme.dart';
-import 'package:e_shop/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../../../logic/controllers/settings_controller.dart';
+import '../../../logic/controllers/theme_controller.dart';
+import '../../../utils/assets_manager.dart';
 import '../../../utils/strings_manager.dart';
+import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
+import '../../../view/widgets/text_utils.dart';
 
 class DarkModeWidget extends StatelessWidget {
    DarkModeWidget({Key? key}) : super(key: key);

@@ -1,10 +1,10 @@
-import '../../../logic/controllers/category_controller.dart';
-import '../../../view/widgets/category/category_items.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../logic/controllers/category_controller.dart';
 import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
+import '../../../view/widgets/category/category_items.dart';
 
 class CategoryWidget extends StatelessWidget {
   CategoryWidget({Key? key}) : super(key: key);

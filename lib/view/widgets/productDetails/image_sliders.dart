@@ -1,14 +1,14 @@
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:e_shop/logic/controllers/cart_controller.dart';
-import 'package:e_shop/utils/theme.dart';
-import 'package:e_shop/view/widgets/productDetails/color_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../../logic/controllers/cart_controller.dart';
 import '../../../routes/routes.dart';
+import '../../../utils/theme.dart';
 import '../../../utils/values_manager.dart';
+import '../../../view/widgets/productDetails/color_picker.dart';
 
 class ImageSliders extends StatefulWidget {
   final String imageUrl;

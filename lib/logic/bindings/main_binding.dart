@@ -1,4 +1,5 @@
 import 'package:get/instance_manager.dart';
+
 import '../../logic/controllers/main_controller.dart';
 import '../controllers/payment_controller.dart';
 import '../controllers/settings_controller.dart';
