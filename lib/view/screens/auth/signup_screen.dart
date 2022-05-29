@@ -41,7 +41,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               SizedBox(
                 width: double.infinity,
-                height: MediaQuery.of(context).size.height / AppSize.s1_3,
+                height: MediaQuery.of(context).size.height *.78,
                 child:  Padding(
                   padding: const EdgeInsets.only(
                     left: AppPadding.p25,

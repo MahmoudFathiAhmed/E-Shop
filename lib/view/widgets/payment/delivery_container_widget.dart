@@ -32,7 +32,7 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
         buildRadioContainer(
           address: "Egypt, Menofia, Ashmoun",
           color: changeColors ? Colors.white : Colors.grey.shade300,
-          title: 'M F Z Store',
+          title: 'M F Z Shop',
           name: 'mahmoud fathi',
           onChanged: (int? value){
             setState((){
@@ -200,7 +200,7 @@ class _DeliveryContainerWidgetState extends State<DeliveryContainerWidget> {
                 const SizedBox(height: AppSize.s5,),
                 Row(
                   children: [
-                    const Text('🇪🇬+02 '),
+                    const Text('🇪🇬+02 ',style: TextStyle(color: Colors.black),),
                     TextUtils(
                       text: phone,
                       fontSize: AppSize.s15,

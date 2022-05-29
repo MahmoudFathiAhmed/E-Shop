@@ -44,6 +44,7 @@ const Map<String, String> ar = {
 
   //Favourites Screen
   AppStrings.favourites:'المفضلـة',
+  AppStrings.pleaseAddYourFavouriteProducts: 'من فضلك قم باضافة منتجاتك المفضلة',
 
   //settings screen
   AppStrings.settings:'الإعـدادات',
@@ -86,7 +87,4 @@ const Map<String, String> ar = {
   AppStrings.payPal: 'باى بال',
   AppStrings.googlePay: 'جوجل باي',
   AppStrings.creditCard: 'بطاقة إئتمانية',
-
-  //favourites screen
-  AppStrings.pleaseAddYourFavouriteProducts: 'please add your favourite products',
 };

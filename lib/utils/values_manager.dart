@@ -229,6 +229,7 @@ class AppSize{
   static const double s0_6=0.6;
   static const double s0_7=0.7;
   static const double s0_75=0.75;
+  static const double s0_77=0.77;
   static const double s0_8=0.8;
   static const double s0_9=0.9;
   static const double s0_99=0.99;
@@ -462,4 +463,9 @@ class AppCount{
   static const int c140=140;
   static const int c160=160;
   static const int c190=190;
+  static const int c200=200;
+  static const int c350=350;
+  static const int c490=490;
+  static const int c500=500;
+  static const int c700=700;
 }

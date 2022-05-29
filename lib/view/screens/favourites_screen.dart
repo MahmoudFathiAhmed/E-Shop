@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -91,9 +92,16 @@ class FavouritesScreen extends StatelessWidget {
                 ),
                 child: AspectRatio(
                   aspectRatio: 1,
-                  child: Image.network(image,
-                  fit: BoxFit.contain,
-                  ),
+                  child: CachedNetworkImage(
+                    imageUrl: image,
+                    fit: BoxFit.contain,
+                    memCacheHeight: AppCount.c200,
+                    memCacheWidth: AppCount.c140,
+                  )
+                  // Image.network(image,
+                  // fit: BoxFit.contain,
+                  // )
+                  ,
                 ),
               ),
             ),

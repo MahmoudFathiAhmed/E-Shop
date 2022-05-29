@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -130,10 +131,17 @@ class CategoryItems extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(AppSize.s10),
                 ),
-                child: Image.network(
-                  image,
+                child: CachedNetworkImage(
+                  imageUrl: image,
+                    memCacheHeight: AppCount.c200,
+                    memCacheWidth: AppCount.c140,
                   fit: BoxFit.fitHeight,
                 ),
+                // Image.network(
+                //   image,
+                //   fit: BoxFit.fitHeight,
+                // )
+
               ),
               Padding(
                 padding: const EdgeInsets.only(left: AppPadding.p15, right: AppPadding.p15, top: AppPadding.p10),

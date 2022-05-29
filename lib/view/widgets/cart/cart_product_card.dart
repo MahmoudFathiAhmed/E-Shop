@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,9 +36,14 @@ class CartProductCard extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(AppSize.s20),
               image: DecorationImage(
-                image: NetworkImage(productModels.image,),
+                image: CachedNetworkImageProvider(
+                  productModels.image,
+                  maxHeight: AppCount.c200,
+                  maxWidth: AppCount.c140,
+                ),
+                // NetworkImage(productModels.image,),
                 fit: BoxFit.contain,
-              )
+              ),
             ),
           ),
           const SizedBox(width: AppSize.s20,),

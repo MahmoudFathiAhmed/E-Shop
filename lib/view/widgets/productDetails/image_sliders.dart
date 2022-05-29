@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -58,7 +59,13 @@ class _ImageSlidersState extends State<ImageSliders> {
                 margin: const EdgeInsets.all(AppSize.s10),
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage(widget.imageUrl),
+                    image:
+                    CachedNetworkImageProvider(
+                      widget.imageUrl,
+                      maxHeight: AppCount.c700,
+                      maxWidth: AppCount.c490,
+                    ),
+                    // NetworkImage(widget.imageUrl),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(AppSize.s25),

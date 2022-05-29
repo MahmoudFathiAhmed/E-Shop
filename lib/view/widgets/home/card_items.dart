@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -142,9 +143,16 @@ class CardItems extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(AppSize.s10),
                 ),
-                child: Image.network(image,
-                fit: BoxFit.fitHeight,
-                ),
+                child: CachedNetworkImage(
+                  imageUrl: image,
+                  fit: BoxFit.fitHeight,
+                  memCacheHeight: AppCount.c200,
+                  memCacheWidth: AppCount.c140,
+                )
+                // Image.network(image,
+                // fit: BoxFit.fitHeight,
+                // )
+                ,
 
               ),
               const SizedBox(height: AppSize.s7,),

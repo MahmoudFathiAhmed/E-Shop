@@ -41,7 +41,7 @@ class CartScreen extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: AppSize.s560,
+                    height: MediaQuery.of(context).size.height*AppSize.s0_77,
                     child: ListView.separated(
                       itemBuilder: (context, index) {
                         return CartProductCard(
@@ -58,12 +58,13 @@ class CartScreen extends StatelessWidget {
                       itemCount: controller.productsMap.length,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: AppPadding.p30,
-                    ),
-                    child: CartTotal(),
-                  ),
+                  CartTotal(),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(
+                  //     bottom: AppPadding.p10,
+                  //   ),
+                  //   child: CartTotal(),
+                  // ),
                 ],
               ),
             );
