@@ -1,16 +1,67 @@
-# e_shop
+# MFZ Shop
 
-A new Flutter project.
+E-Commerce App
 
-## Getting Started
+## features
+- view all available products.
+- The ability to search for any product by name and price.
+- adding any product you want to your cart with the ability to delete any element or all element once.
+- mark any product as favourite product and the ability to remove it from your favourites list.
+- divide product into categories.
+- two languages (english & arabic).
+- Two themes (light & dark ) mode.
+- you can browse each category seperately.
+- You can see all the details of the product in a special screen.
+- special screen for payment.
+- singing up by email and password and username.
+- singing in by email and password.
+- signing in by google accounts.
+- forgot password property.
+- splash screen.
+- welcome screen.
 
-This project is a starting point for a Flutter application.
+## Packages
+- google sign in
+- firebase auth
+- firebase core
+- get
+- get storage
+- google fonts
+- http
+- badges
+- carousel slider
+- smooth page indicator
+- flutter rating bar
+- reed more
+- geo locator
+- geo coding
+- flutter svg
+- cached network image
+- flutter native splash
 
-A few resources to get you started if this is your first Flutter project:
+## API Reference
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### Get all products
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```https
+  GET https://fakestoreapi.com/products
+```
+
+#### Get all categories
+
+```http
+  GET https://fakestoreapi.com/products/categories
+```
+
+#### Get specific categories
+
+```http
+  GET https://fakestoreapi.com/products/category/{categoryName}
+```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `No Keys needed` | `dynamic` | Api key not **Required**. |
+
+
+## Logo
+![](../mfzshop project pictures/eshop_app_ic.png)
