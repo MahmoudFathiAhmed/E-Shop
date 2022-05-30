@@ -76,14 +76,13 @@
 | forgot screen |<img src="https://user-images.githubusercontent.com/68497543/171059631-a1e55687-39cd-4147-b2b7-7bd88c436254.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171059641-f28dc736-1513-4205-a8c8-e59388ccef44.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171059637-dbc9d246-52bc-4312-9ed4-5c7568622dc6.jpg" width="225" height ="500">                          |
 | home screen |<img src="https://user-images.githubusercontent.com/68497543/171059903-768bd0d9-1152-428c-b4a0-2d11bf1506e6.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171059919-32833aca-7b75-4a38-af33-3d3b11299dd7.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171059914-e07d160f-bcac-47de-8842-5541654fffd0.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171059932-a812fbb4-6851-405b-b252-fa8cefe1012a.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171059927-568cdc03-4ddc-46bf-8b37-eb1af9dfe8f2.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171059924-8ddaf679-b2ab-4400-a3b2-171147d1a550.jpg" width="225" height ="500">|
 | product details |<img src="https://user-images.githubusercontent.com/68497543/171060505-f6ea09a8-ac39-4961-a557-46ff62fcbe6a.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060516-30a620d8-4d65-42a4-ba08-f21d38a85a26.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060519-f419bb28-184d-49e6-8405-01ae590e84b7.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060530-fd09f880-c333-46cb-ab6b-1fe678db1403.jpg" width="225" height ="500">|
-| cart screen |                          |
+| cart screen |<img src="https://user-images.githubusercontent.com/68497543/171060848-90b0337d-1862-493e-bdda-66c33f04d872.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060838-f35c7651-5a8a-48db-be6a-ebd2920caaea.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060857-3d2fa74c-5ff8-44ec-bee1-6f1010779fdb.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060859-b6302311-5fe0-4664-9ea3-5ae5eee6797c.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171060834-97e630e5-340f-4f20-807e-cf77b54f20b9.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060829-9d937e41-924b-4c75-8317-1c18915e8b12.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171060846-1d99653c-228d-476e-befb-665acee55d9e.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060843-644c4640-8e2c-447b-b2c2-cecac9c62a6d.jpg" width="225" height ="500"> <img src="https://user-images.githubusercontent.com/68497543/171060847-6d9c58b2-6d57-4c2f-81b7-301babe8a7af.jpg" width="225" height ="500">  <img src="https://user-images.githubusercontent.com/68497543/171060851-195c185f-5ba4-4f17-a043-3fd9035376d9.jpg" width="225" height ="500">|
 | payment screen |                          |
 | categories screen |                          |
 | favourites screen |                          |
 |  setting screen|                          |
 
 
-
 <img src="" width="225" height ="500">
 <img src="" width="225" height ="500">
 <img src="" width="225" height ="500">
@@ -95,12 +94,6 @@
 <img src="" width="225" height ="500">
 <img src="" width="225" height ="500">
 <img src="" width="225" height ="500">
-<img src="" width="225" height ="500">
-<img src="" width="225" height ="500">
-<img src="" width="225" height ="500">
-<img src="" width="225" height ="500">
-<img src="" width="225" height ="500">
-
 
 
 
