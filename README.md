@@ -1,8 +1,8 @@
-# MFZ Shop
+# 🛒 MFZ Shop
 
 E-Commerce App
 
-## features
+## ⭐ features
 - view all available products.
 - The ability to search for any product by name and price.
 - adding any product you want to your cart with the ability to delete any element or all element once.
@@ -20,7 +20,7 @@ E-Commerce App
 - splash screen.
 - welcome screen.
 
-## Packages
+## 📦 Packages
 - google sign in
 - firebase auth
 - firebase core
@@ -64,4 +64,5 @@ E-Commerce App
 
 
 ## Logo
-![](../mfzshop project pictures/eshop_app_ic.png)
+
+## 📸 Screenshots
