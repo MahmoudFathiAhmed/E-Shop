@@ -49,13 +49,13 @@ E-Commerce App
 
 #### Get all categories
 
-```http
+```https
   GET https://fakestoreapi.com/products/categories
 ```
 
 #### Get specific categories
 
-```http
+```https
   GET https://fakestoreapi.com/products/category/{categoryName}
 ```
 | Parameter | Type     | Description                |
