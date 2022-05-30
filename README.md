@@ -64,5 +64,6 @@
 
 
 ## Logo
-![](../mfzshop%20project%20pictures/eshop_app_ic.png)
+![eshop_app_ic](https://user-images.githubusercontent.com/68497543/171041095-493c6d8c-59f6-4722-a79c-4f2eadd9c9f9.png)
+
 ## 📸 **Screenshots**
