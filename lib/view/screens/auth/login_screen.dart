@@ -176,31 +176,16 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(
                           height: AppSize.s20,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                controller.faceBookSignUpApp();
-                              },
-                              child: Image.asset(
-                                ImageAssets.facebook,
-                              ),
+                        GetBuilder<AuthController>(builder: (_) {
+                          return InkWell(
+                            onTap: () {
+                              controller.googleSinUpApp();
+                            },
+                            child: Image.asset(
+                              ImageAssets.google,
                             ),
-                            const SizedBox(
-                              width: AppSize.s10,
-                            ),
-                            GetBuilder<AuthController>(builder: (_) {
-                              return InkWell(
-                                onTap: () {
-                                  controller.googleSinUpApp();
-                                },
-                                child: Image.asset(
-                                  ImageAssets.google,
-                                ),
-                              );
-                            }),
-                          ],
+                          );
+                        }
                         ),
                       ],
                     ),

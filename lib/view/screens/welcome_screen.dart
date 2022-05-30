@@ -80,8 +80,9 @@ class WelcomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: AppSize.s370,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height*0.5,
+                  // height: AppSize.s370,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(

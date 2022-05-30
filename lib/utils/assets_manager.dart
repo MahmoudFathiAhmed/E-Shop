@@ -8,7 +8,6 @@ class ImageAssets{
   static const String  darkModeIc= "$imagePath/dark_mode_ic.svg";
   static const String  electronics= "$imagePath/electronics.png";
   static const String  emptyProfile= "$imagePath/empty_profile.png";
-  static const String  facebook= "$imagePath/facebook.png";
   static const String  favouritesIc= "$imagePath/favourites_ic.svg";
   static const String  forgotPassword= "$imagePath/forgot_password.svg";
   static const String  google= "$imagePath/google.png";
